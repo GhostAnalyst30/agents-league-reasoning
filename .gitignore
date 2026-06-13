@@ -2,8 +2,8 @@
 .env
 .env.*
 !.env.example
-*.pem
-*.key
+env
+*.pem*.key
 **/secrets/
 
 # Python
@@ -22,3 +22,12 @@ Thumbs.db
 # Outputs locales
 *.log
 outputs/
+
+# Node / frontend builds
+node_modules/
+app/web/dist/
+presentation/node_modules/
+presentation/dist/
+
+# Archives
+*.zip
