@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
@@ -14,6 +15,23 @@ export default {
           850: '#0e1528',
           800: '#131c33',
           700: '#1c2742',
+        },
+        sidebar: {
+          DEFAULT: '#0a101f',
+          foreground: '#f1f5f9',
+          muted: '#64748b',
+          accent: '#131c33',
+        },
+        success: {
+          DEFAULT: '#34d399',
+          foreground: '#064e3b',
+        },
+        warning: {
+          DEFAULT: '#fbbf24',
+          foreground: '#78350f',
+        },
+        info: {
+          DEFAULT: '#38bdf8',
         },
       },
       animation: {
