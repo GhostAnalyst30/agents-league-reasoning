@@ -1,0 +1,30 @@
+{
+  "_disclaimer": "SYNTHETIC DATA - Semantic model seed aligned to the Fabric IQ ontology concept: entities, relationships and business rules for the enterprise learning domain.",
+  "entities": {
+    "certifications": [
+      { "id": "AZ-204", "name": "Azure Developer Associate",        "level": "Associate", "skills": ["API Development", "Azure Functions", "Storage", "Containers", "Security"], "recommended_hours": 20, "pass_threshold_practice": 75, "prerequisites": [] },
+      { "id": "AZ-305", "name": "Azure Solutions Architect Expert", "level": "Expert",    "skills": ["Architecture Design", "Networking", "Governance", "High Availability"],   "recommended_hours": 30, "pass_threshold_practice": 78, "prerequisites": ["AZ-204"] },
+      { "id": "AZ-400", "name": "DevOps Engineer Expert",           "level": "Expert",    "skills": ["CI/CD", "Monitoring", "GitHub Actions", "IaC", "Release Management"],     "recommended_hours": 25, "pass_threshold_practice": 75, "prerequisites": ["AZ-204"] },
+      { "id": "DP-203", "name": "Azure Data Engineer Associate",    "level": "Associate", "skills": ["Data Pipelines", "Data Lake", "Spark", "SQL", "Data Security"],           "recommended_hours": 22, "pass_threshold_practice": 75, "prerequisites": [] },
+      { "id": "SC-100", "name": "Cybersecurity Architect Expert",   "level": "Expert",    "skills": ["Zero Trust", "Identity", "Threat Protection", "Compliance"],              "recommended_hours": 28, "pass_threshold_practice": 78, "prerequisites": [] }
+    ],
+    "roles": [
+      { "id": "cloud-engineer",    "name": "Cloud Engineer",    "primary_certification": "AZ-204", "secondary_certification": "AZ-305" },
+      { "id": "devops-engineer",   "name": "DevOps Engineer",   "primary_certification": "AZ-400", "secondary_certification": null },
+      { "id": "data-engineer",     "name": "Data Engineer",     "primary_certification": "DP-203", "secondary_certification": null },
+      { "id": "security-engineer", "name": "Security Engineer", "primary_certification": "SC-100", "secondary_certification": null }
+    ]
+  },
+  "relationships": [
+    { "type": "REQUIRES",     "description": "A certification may require completing another certification first (prerequisites field)." },
+    { "type": "ALIGNED_TO",   "description": "A role is aligned to a primary and optionally a secondary certification." },
+    { "type": "COVERS_SKILL", "description": "A certification covers a set of skills; skill gaps are computed against assessment results per skill." }
+  ],
+  "business_rules": [
+    { "id": "BR-001", "rule": "A learner is exam-ready only when practice_score_avg >= pass_threshold_practice AND hours_studied >= 0.8 * recommended_hours." },
+    { "id": "BR-002", "rule": "A study plan must not schedule more weekly study hours than the learner's focus_hours_per_week minus 5 (protected focus buffer)." },
+    { "id": "BR-003", "rule": "Expert-level certifications cannot be recommended before prerequisites are passed." },
+    { "id": "BR-004", "rule": "If meeting_hours_per_week > 20, weekly study allocation is capped at 4 hours and flagged as capacity-constrained." },
+    { "id": "BR-005", "rule": "Manager insights must only expose team-level aggregates, never individual raw scores without the learner's consent flag." }
+  ]
+}

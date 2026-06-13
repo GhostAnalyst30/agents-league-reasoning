@@ -1,0 +1,14 @@
+{
+  "_disclaimer": "SYNTHETIC DATA - Simulated work-context signals aligned to the Work IQ concept. No real calendar, email or activity data.",
+  "_concept": "Each record simulates the kind of organizational signals Work IQ derives from meetings, focus time and collaboration patterns.",
+  "work_signals": [
+    { "employee_id": "EMP-1001", "learner_id": "L-1001", "meeting_hours_per_week": 22, "focus_hours_per_week": 10, "collaboration_load": "high",   "preferred_learning_slot": "Morning",   "best_days": ["Tue", "Thu"], "timezone": "UTC-5" },
+    { "employee_id": "EMP-1002", "learner_id": "L-1002", "meeting_hours_per_week": 15, "focus_hours_per_week": 18, "collaboration_load": "medium", "preferred_learning_slot": "Afternoon", "best_days": ["Mon", "Wed", "Fri"], "timezone": "UTC-5" },
+    { "employee_id": "EMP-1003", "learner_id": "L-1003", "meeting_hours_per_week": 12, "focus_hours_per_week": 20, "collaboration_load": "low",    "preferred_learning_slot": "Morning",   "best_days": ["Mon", "Tue", "Wed"], "timezone": "UTC-6" },
+    { "employee_id": "EMP-1004", "learner_id": "L-1004", "meeting_hours_per_week": 28, "focus_hours_per_week": 6,  "collaboration_load": "high",   "preferred_learning_slot": "Evening",   "best_days": ["Fri"], "timezone": "UTC-5" },
+    { "employee_id": "EMP-1005", "learner_id": "L-1005", "meeting_hours_per_week": 16, "focus_hours_per_week": 15, "collaboration_load": "medium", "preferred_learning_slot": "Morning",   "best_days": ["Tue", "Thu"], "timezone": "UTC-8" },
+    { "employee_id": "EMP-1006", "learner_id": "L-1006", "meeting_hours_per_week": 25, "focus_hours_per_week": 8,  "collaboration_load": "high",   "preferred_learning_slot": "Afternoon", "best_days": ["Wed"], "timezone": "UTC-6" },
+    { "employee_id": "EMP-1007", "learner_id": "L-1007", "meeting_hours_per_week": 10, "focus_hours_per_week": 22, "collaboration_load": "low",    "preferred_learning_slot": "Morning",   "best_days": ["Mon", "Tue", "Wed", "Thu"], "timezone": "UTC-5" },
+    { "employee_id": "EMP-1008", "learner_id": "L-1008", "meeting_hours_per_week": 18, "focus_hours_per_week": 14, "collaboration_load": "medium", "preferred_learning_slot": "Afternoon", "best_days": ["Tue", "Fri"], "timezone": "UTC-5" }
+  ]
+}

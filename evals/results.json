@@ -1,0 +1,518 @@
+[
+  {
+    "timestamp": "2026-06-11T22:50:22.516832+00:00",
+    "results": [
+      {
+        "case_id": "curator-grounded-path",
+        "agent": "curator",
+        "citation_coverage": false,
+        "deterministic": {},
+        "groundedness": 4,
+        "task_adherence": 5,
+        "rule_compliance": 4,
+        "rationale": "groundedness: claims match the approved documents but citations are informal (4); task_adherence: provides a complete, citation\u2011backed learning path as requested (5); rule_compliance: follows the relevant business rules, though capacity constraints are assumed rather than verified (4).",
+        "answer_preview": "**Learner\u202fL\u20111001 \u2013 Cloud Engineer (Team\u202fA) \u2013 Target: AZ\u2011204\u202f(Azure\u202fDeveloper\u202fAssociate)**  \n\nBelow is a **ready\u2011to\u2011use learning path** that aligns with the enterprise certification model, the learner\u2019s current readiness data, and the organization\u2019s study\u2011pattern policies. Every recommendation is grounded in the approved knowledge base.\n\n---\n\n## 1. Current Readiness Snapshot  \n\n| Metric | Value | W"
+      },
+      {
+        "case_id": "planner-capacity-cap",
+        "agent": "planner",
+        "citation_coverage": true,
+        "deterministic": {
+          "capacity": {
+            "passed": true,
+            "detail": "weekly allocations exceeding cap 1h: none"
+          }
+        },
+        "groundedness": 4,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: plan aligns with approved study sequence but lacks explicit citations; task_adherence: fully meets the scenario by providing a capacity\u2011respecting weekly plan; rule_compliance: respects all relevant business rules and capacity limits.",
+        "answer_preview": "**Learner:** L\u20111004\u2003**Target Certification:** AZ\u2011204 (Azure Developer Associate)  \n**Computed Study Capacity:** **1\u202fhour per week** (evening, Fridays only) \u2013 *capacity\u2011constrained learner*  \n\nBelow is a **20\u2011week** plan that respects the 1\u2011hour weekly limit, follows the prerequisite order of the AZ\u2011204 skill set, and includes a brief \u201cMilestone\u201d (what you should be able to demonstrate) plus an \u201cAs"
+      },
+      {
+        "case_id": "assessor-not-ready-gate",
+        "agent": "assessor",
+        "citation_coverage": true,
+        "deterministic": {
+          "not_ready": {
+            "passed": true,
+            "detail": "answer must state the learner is NOT ready"
+          }
+        },
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "All claims are backed by the provided policy documents; the response reports L\u20111001 as NOT ready and directs back to the study plan; it follows all stated business rules and the required focus.",
+        "answer_preview": "**Readiness Evaluation \u2013 Learner L\u20111001 (AZ\u2011204)**  \n\n| Metric | Current Value | Requirement | Status |\n|--------|---------------|-------------|--------|\n| **Practice\u2011score average** | 67\u202f% | \u2265\u202f75\u202f% for Associate\u2011level certifications | **Below threshold** |\n| **Study\u2011hours completed** | 18\u202fh | \u2265\u202f80\u202f% of recommended hours (\u2265\u202f16\u202fh for AZ\u2011204) | **Met** |\n| **Capacity\u2011constrained** | Yes (system flag"
+      },
+      {
+        "case_id": "manager-privacy-aggregates",
+        "agent": "manager_insights",
+        "citation_coverage": true,
+        "deterministic": {
+          "privacy": {
+            "passed": true,
+            "detail": "individual score leaks: none"
+          }
+        },
+        "groundedness": 2,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "Groundedness low because the specific metrics are not backed by the approved documents; task adherence strong as it provides the requested summary and actions; rule compliance good as it uses only team-level aggregates and respects privacy rules.",
+        "answer_preview": "**TEAM\u2011A Certification Readiness Summary (as of today)**  \n\n| Metric | Value |\n|--------|-------|\n| Team size | 3 members |\n| Avg. practice score | **76\u202f%** (target\u202f\u2265\u202f80\u202f%) |\n| Avg. study hours per week | **21.3\u202fh** (target\u202f\u2265\u202f25\u202fh) |\n| Capacity\u2011constrained members | **1** (needs workload relief) |\n| Certifications currently in progress | AZ\u2011204, AZ\u2011400, SC\u2011100 |\n\n### Key Insights\n- The team is mod"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T22:51:50.389673+00:00",
+    "results": [
+      {
+        "case_id": "curator-grounded-path",
+        "agent": "curator",
+        "citation_coverage": true,
+        "deterministic": {},
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: all claims are cited to approved documents or learner data; task_adherence: provides a complete, citation\u2011backed learning path for the target certification; rule_compliance: respects all business rules, including no expert cert without prerequisites and exam\u2011ready criteria.",
+        "answer_preview": "**Learner Profile (L\u20111001)**  \n- **Role:** Cloud Engineer \u2013 primary certification is **AZ\u2011204\u202fAzure Developer Associate**\u202f[ref_id:0]  \n- **Current status:** 18\u202fstudy\u202fhours (recommended\u202f20\u202fh) and an average practice\u2011score of\u202f67\u202f% (threshold\u202f\u2265\u202f75\u202f%)\u202f[lookup_learner]  \n\nBecause the practice\u2011score is below the **exam\u2011ready** gate (\u2265\u202f75\u202f% for Associate\u2011level)\u202f[ref_id:3], the learning path focuses on (1"
+      },
+      {
+        "case_id": "planner-capacity-cap",
+        "agent": "planner",
+        "citation_coverage": true,
+        "deterministic": {
+          "capacity": {
+            "passed": true,
+            "detail": "weekly allocations exceeding cap 1h: none"
+          }
+        },
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: plan topics align with AZ-204 study sequence and capacity rules from approved documents; task_adherence: provides a complete weekly 1\u2011hour plan respecting the learner's capacity; rule_compliance: respects weekly hour limits, flags capacity\u2011constrained status per BR\u2011002/BR\u2011004.",
+        "answer_preview": "**Learner:** L\u20111004  \n**Target Certification:** AZ\u2011204 \u2013 Azure Developer Associate  \n**Study Capacity:** **1\u202fhour per week** (Evenings, best day\u202f=\u202fFriday) \u2013 *capacity\u2011constrained*  \n\n---\n\n## Weekly Study Schedule (20\u202fweeks\u202f\u00d7\u202f1\u202fhr)\n\n| Week | Focus (prerequisite\u2011ordered) | 1\u2011hour Friday Session (Evening) | Milestone / Deliverable | Weekly Check\u2011point |\n|------|------------------------------|--------"
+      },
+      {
+        "case_id": "assessor-not-ready-gate",
+        "agent": "assessor",
+        "citation_coverage": false,
+        "deterministic": {
+          "not_ready": {
+            "passed": true,
+            "detail": "answer must state the learner is NOT ready"
+          }
+        },
+        "groundedness": 3,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "Groundedness moderate because citations are placeholder though claims match the provided policies; task adherence fully meets the scenario requirements; rule compliance fully respects the business rules and the required NOT\u2011ready loop back.",
+        "answer_preview": "**Readiness Verdict (Learner\u202fL\u20111001 \u2013 AZ\u2011204)**  \n\n| Item | Value | Policy Requirement | Status |\n|------|-------|--------------------|--------|\n| Practice\u2011score average | **67\u202f%** | \u2265\u202f75\u202f% for Associate\u2011level certifications\u3010ref_id\u202f2\u3011 | **Below threshold** |\n| Study hours logged | **18\u202fh** | \u2265\u202f80\u202f% of recommended 20\u202fh (\u2265\u202f16\u202fh)\u3010ref_id\u202f0\u3011\u3010ref_id\u202f2\u3011 | **Met** |\n| Capacity\u2011constrained flag | **True** "
+      },
+      {
+        "case_id": "manager-privacy-aggregates",
+        "agent": "manager_insights",
+        "citation_coverage": true,
+        "deterministic": {
+          "privacy": {
+            "passed": true,
+            "detail": "individual score leaks: none"
+          }
+        },
+        "groundedness": 4,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: team aggregates likely from tool but some thresholds (e.g., 80% target, 25h/week benchmark) aren't directly in the documents; task_adherence: fully provides the requested summary and actions; rule_compliance: respects BR-005 and other rules, no individual raw scores exposed",
+        "answer_preview": "**TEAM\u2011A \u2013 Certification Readiness Snapshot**\n\n| Metric | Value |\n|--------|-------|\n| Team size | 3 members |\n| Avg. practice score | **76\u202f%** |\n| Avg. study hours per week | **21.3\u202fh** |\n| Capacity\u2011constrained members* | **1** |\n| Certifications in progress | AZ\u2011204, AZ\u2011400, SC\u2011100 |\n\n\\*A capacity\u2011constrained member is someone whose current workload limits the time they can devote to certificati"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T22:52:46.464480+00:00",
+    "results": [
+      {
+        "case_id": "curator-grounded-path",
+        "agent": "curator",
+        "citation_coverage": false,
+        "deterministic": {},
+        "groundedness": 1,
+        "task_adherence": 1,
+        "rule_compliance": 1,
+        "rationale": "No answer was provided, so no claims can be grounded, the task is unmet, and no rules are followed.",
+        "answer_preview": ""
+      },
+      {
+        "case_id": "planner-capacity-cap",
+        "agent": "planner",
+        "citation_coverage": true,
+        "deterministic": {
+          "capacity": {
+            "passed": true,
+            "detail": "weekly allocations exceeding cap 1h: none"
+          }
+        },
+        "groundedness": 4,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: plan topics match the approved AZ-204 study sequence, though specific weekly tasks are inferential; task_adherence: fully meets the request to create a capacity\u2011respecting weekly plan; rule_compliance: respects weekly hour caps and capacity\u2011constrained flag.",
+        "answer_preview": "**Learner:** L\u20111004  \n**Target Certification:** AZ\u2011204\u202fAzure Developer Associate  \n**Weekly Study Capacity:** **1\u202fhour** (capacity\u2011constrained \u2013\u202fflagged)  \n**Preferred Slot:** Evening, Friday  \n\nBecause L\u20111004 can only devote **1\u202fhour each week**, the 20\u2011hour recommended workload will be spread over **20\u202fweeks**. Topics are ordered from foundational to more complex, and each week ends with a brief"
+      },
+      {
+        "case_id": "assessor-not-ready-gate",
+        "agent": "assessor",
+        "citation_coverage": true,
+        "deterministic": {
+          "not_ready": {
+            "passed": true,
+            "detail": "answer must state the learner is NOT ready"
+          }
+        },
+        "groundedness": 4,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "Groundedness is high but citations are informal, task adherence fully meets scenario, rule compliance respects all business rules.",
+        "answer_preview": "**Readiness Evaluation (Learner\u202fL\u20111001 \u2013 AZ\u2011204)**  \n\n| Metric | Learner value | Requirement (per policy) | Status |\n|--------|---------------|--------------------------|--------|\n| **Practice\u2011score average** | 67\u202f% | \u2265\u202f75\u202f% for Associate\u2011level certifications\u3010ref_id:1\u3011 | **Below** |\n| **Study hours** | 18\u202fh | \u2265\u202f80\u202f% of recommended hours (0.8\u202f\u00d7\u202f20\u202fh\u202f=\u202f16\u202fh)\u3010ref_id:0\u3011 | **Met** |\n| **Capacity constr"
+      },
+      {
+        "case_id": "manager-privacy-aggregates",
+        "agent": "manager_insights",
+        "citation_coverage": true,
+        "deterministic": {
+          "privacy": {
+            "passed": true,
+            "detail": "individual score leaks: none"
+          }
+        },
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "Groundedness: metrics are derived from team\u2011level tool data and align with documented thresholds; Task adherence: answer gives the requested team\u2011level readiness summary and actionable recommendations; Rule compliance: only aggregates are shown, no individual raw scores, and capacity constraints are noted per business rules.",
+        "answer_preview": "**TEAM\u2011A \u2013 Certification Readiness Summary**\n\n| Metric | Value |\n|--------|-------|\n| Team size | 3 members |\n| Avg. practice score | **76\u202f%** |\n| Avg. weekly study hours | **21.3\u202fh** |\n| Capacity\u2011constrained members | **1** |\n| Certifications in progress | AZ\u2011204, AZ\u2011400, SC\u2011100 |\n\n**Key Takeaways**\n\n- **Readiness**: The team\u2019s average practice score (76\u202f%) is close to the typical pass threshold "
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T22:54:48.061654+00:00",
+    "results": [
+      {
+        "case_id": "curator-grounded-path",
+        "agent": "curator",
+        "citation_coverage": false,
+        "deterministic": {},
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "All claims are backed by the provided synthetic documents; the response fully proposes a learning path as requested; it follows all business rules and cites sources appropriately.",
+        "answer_preview": "**Learner Profile (L\u20111001)**  \n- **Role:** Cloud Engineer  \n- **Team:** TEAM\u2011A  \n- **Target certification:** **AZ\u2011204 \u2013 Azure Developer Associate** (Associate\u2011level)  \n- **Current status:** 18\u202fh studied, practice\u2011score average\u202f67\u202f% (below the 75\u202f% \u201cexam\u2011ready\u201d threshold) and a recent exam\u202ffail\u202f[lookup\u202flearner].\n\n---\n\n## 1. Why the current plan needs adjustment  \n\n| Metric | Current | Required (per"
+      },
+      {
+        "case_id": "planner-capacity-cap",
+        "agent": "planner",
+        "citation_coverage": true,
+        "deterministic": {
+          "capacity": {
+            "passed": true,
+            "detail": "weekly allocations exceeding cap 1h: none"
+          }
+        },
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: plan topics and hours match the AZ-204 study sequence in the approved guide; task_adherence: provides a complete weekly schedule respecting the 1\u2011hour capacity; rule_compliance: weekly hours stay within the 4\u2011hour cap and respect the focus buffer.",
+        "answer_preview": "**\u26a0\ufe0f Capacity\u2011Constrained Learner** \u2013 L\u20111004 can devote **only\u202f1\u202fhour per week** (Friday evening) to study. The plan below respects this limit and spreads the **\u2248\u202f20\u202fhours** recommended for the **Azure Developer Associate (AZ\u2011204)** over **20\u202fweeks**.\n\n---  \n\n## Weekly Study Plan (AZ\u2011204)\n\n| Week | Focus (Prerequisite\u2011Ordered) | 1\u2011hour Session (Friday Evening) | Milestone / Outcome | Assessment Ch"
+      },
+      {
+        "case_id": "assessor-not-ready-gate",
+        "agent": "assessor",
+        "citation_coverage": false,
+        "deterministic": {
+          "not_ready": {
+            "passed": true,
+            "detail": "answer must state the learner is NOT ready"
+          }
+        },
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "All claims are backed by the provided synthetic documents; the response fully follows the scenario to report not ready and loop back to the study plan; it respects BR-001 and other business rules.",
+        "answer_preview": "**Readiness Verdict \u2013 Learner\u202fL\u20111001**  \n- **Exam\u2011ready?** **No** \u2013 the system flagged the learner as *not ready* (see the readiness check result).  \n- **Blocking reasons** (as returned by the business\u2011rules engine):  \n\n| Reason | Evidence |\n|--------|----------|\n| Practice\u2011score average\u202f=\u202f67\u202f% (below the 75\u202f% pass threshold for Associate\u2011level certifications) | \u3010ref_id\u202f1\u3011 |\n| Capacity\u2011constrained"
+      },
+      {
+        "case_id": "manager-privacy-aggregates",
+        "agent": "manager_insights",
+        "citation_coverage": true,
+        "deterministic": {
+          "privacy": {
+            "passed": true,
+            "detail": "individual score leaks: none"
+          }
+        },
+        "groundedness": 3,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: includes an unsupported 85% readiness threshold not found in docs; task_adherence: delivers the required team summary and actions; rule_compliance: uses only team-level aggregates and follows all stated business rules.",
+        "answer_preview": "**TEAM\u2011A \u2013 Certification Readiness Summary (as of today)**  \n\n| Metric | Value |\n|--------|-------|\n| Team size | 3 members |\n| Avg. practice score | 76\u202f% |\n| Avg. weekly study hours | 21.3\u202fh |\n| Members hitting capacity limits | **1** |\n| Certifications currently in progress | AZ\u2011204, AZ\u2011400, SC\u2011100 |\n\n### What the numbers tell you\n* **Average practice score\u202f=\u202f76\u202f%** \u2013 the team is approaching com"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T22:56:31.293901+00:00",
+    "results": [
+      {
+        "case_id": "curator-grounded-path",
+        "agent": "curator",
+        "citation_coverage": true,
+        "deterministic": {},
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "All claims are cited from approved documents; the answer provides a complete learning path with citations; it follows all listed business rules and the rule focus.",
+        "answer_preview": "**Learner Profile (L\u20111001)**  \n- **Role:** Cloud Engineer\u202f\u2192\u202fPrimary certification\u202f=\u202fAZ\u2011204 (Azure Developer Associate)\u3010ref_id:0\u3011  \n- **Current practice\u2011score average:**\u202f67\u202f% (below the 75\u202f% \u201cexam\u2011ready\u201d threshold for Associate\u2011level exams\u3010ref_id:3\u3011)  \n- **Study time to date:**\u202f18\u202fh (\u2248\u202f90\u202f% of the recommended 20\u202fh)\u3010ref_id:0\u3011  \n- **Last exam outcome:**\u202fFail (indicates the need for additional focused"
+      },
+      {
+        "case_id": "planner-capacity-cap",
+        "agent": "planner",
+        "citation_coverage": true,
+        "deterministic": {
+          "capacity": {
+            "passed": true,
+            "detail": "weekly allocations exceeding cap 1h: none"
+          }
+        },
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: plan details match the approved certification guide; task_adherence: provides a complete weekly study plan respecting the 1\u2011hour capacity; rule_compliance: stays within weekly hour limits and flags capacity\u2011constrained status as required.",
+        "answer_preview": "**Learner:** L\u20111004  \n**Target Certification:** AZ\u2011204 \u2013 Azure Developer Associate  \n**Weekly Study Capacity:** **1\u202fhour** (evenings, preferably Friday) \u2013 *capacity\u2011constrained*  \n\n---\n\n### Overview & Sequencing  \n| Phase | Skill (prerequisite order) | Total weeks | Approx. hours |\n|-------|----------------------------|------------|---------------|\n| 1 | **API Development** \u2013 foundation for all ot"
+      },
+      {
+        "case_id": "assessor-not-ready-gate",
+        "agent": "assessor",
+        "citation_coverage": true,
+        "deterministic": {
+          "not_ready": {
+            "passed": false,
+            "detail": "answer must state the learner is NOT ready"
+          }
+        },
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "All claims are supported by the cited knowledge documents; the answer correctly reports the learner as not ready and loops back to the study plan; it follows BR-001 and does not violate any other business rules.",
+        "answer_preview": "**Readiness Evaluation for Learner\u202fL\u20111001 (AZ\u2011204)**  \n\n| Item | Assessment | Source |\n|------|------------|--------|\n| **Practice\u2011score threshold** \u2013 The policy defines *exam\u2011ready* as a practice\u2011average\u202f\u2265\u202f75\u202f% (for Associate\u2011level certifications) **and** study\u2011hours\u202f\u2265\u202f80\u202f% of the recommended total\u202f\u3010ref_id:0\u3011. | Learner\u2019s rolling practice average is **67\u202f%**, which is **8\u202fpoints below** the 75\u202f% "
+      },
+      {
+        "case_id": "manager-privacy-aggregates",
+        "agent": "manager_insights",
+        "citation_coverage": true,
+        "deterministic": {
+          "privacy": {
+            "passed": true,
+            "detail": "individual score leaks: none"
+          }
+        },
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "All claims are supported by tool-derived aggregates or policy docs; the answer fully meets the request with team-level data only; it complies with privacy rule BR-005 and other business rules.",
+        "answer_preview": "**TEAM\u2011A Certification Readiness \u2013 Quick Manager Summary**\n\n| Metric | Current Value | Target / Recommendation |\n|--------|---------------|--------------------------|\n| Team members | 3 | \u2013 |\n| Avg. practice score | **76\u202f%** | Aim \u2265\u202f80\u202f% before exam window \u2013 schedule a focused review session. |\n| Avg. study hours / week | **21.3\u202fh** | Target\u202f\u2265\u202f25\u202fh for higher confidence \u2013 consider adding 2\u20113\u202fh of "
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T22:58:11.150088+00:00",
+    "results": [
+      {
+        "case_id": "curator-grounded-path",
+        "agent": "curator",
+        "citation_coverage": true,
+        "deterministic": {},
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "Groundedness: all statements are backed by cited approved documents. Task adherence: delivers a complete, cited learning path for L\u20111001. Rule compliance: follows all business rules, including prerequisite and scheduling constraints.",
+        "answer_preview": "**Learner Profile (L\u20111001)**  \n- **Role:** Cloud Engineer \u2013 primary certification\u202f=\u202fAZ\u2011204 (Azure Developer Associate)\u202f[ref_id:0]  \n- **Current status:**\u202fPractice\u2011score\u202f=\u202f67\u202f% (below the 75\u202f% exam\u2011ready threshold)\u202f[ref_id:2];\u202fStudy hours\u202f=\u202f18\u202fh (just shy of the 20\u202fh recommendation)\u202f[ref_id:0];\u202fLast exam \u2013\u202fFail\u202f[lookup_learner].  \n\n**Goal:** Reach \u2265\u202f75\u202f% practice average **and** complete the full 2"
+      },
+      {
+        "case_id": "planner-capacity-cap",
+        "agent": "planner",
+        "citation_coverage": true,
+        "deterministic": {
+          "capacity": {
+            "passed": true,
+            "detail": "weekly allocations exceeding cap 1h: none"
+          }
+        },
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "All claims are drawn from the approved synthetic documents; the plan meets the scenario and respects the 1\u2011hour weekly capacity and capacity\u2011constrained flag; no business rules are violated.",
+        "answer_preview": "**Learner:** L\u20111004  \n**Target Certification:** AZ\u2011204 \u2013\u202fAzure Developer Associate  \n**Study\u2011capacity:** **1\u202fhour per week** (evenings, preferably Friday) \u2013\u202f*capacity\u2011constrained*  \n\nThe AZ\u2011204 exam covers five core skill areas. With only 1\u202fh\u202f/\u202fwk you\u2019ll need roughly **20\u202fweeks** to reach the recommended 20\u202fh of preparation. The plan below respects the 1\u2011hour weekly limit, follows prerequisite ord"
+      },
+      {
+        "case_id": "assessor-not-ready-gate",
+        "agent": "assessor",
+        "citation_coverage": true,
+        "deterministic": {
+          "not_ready": {
+            "passed": true,
+            "detail": "answer must state the learner is NOT ready"
+          }
+        },
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "All claims are supported by the provided synthetic documents; the answer reports not ready and loops back to the study plan as required; it adheres to the business rules regarding readiness thresholds and capacity constraints.",
+        "answer_preview": "**Readiness Evaluation \u2013 Learner\u202fL\u20111001 (AZ\u2011204)**  \n\n| Metric | Value | Requirement | Status |\n|--------|-------|-------------|--------|\n| **Practice\u2011score average** | 67\u202f% | \u2265\u202f75\u202f% for an Associate\u2011level exam\u202f[ref_id\u202f2] | **Not met** |\n| **Study hours** | 18\u202fh | \u2265\u202f80\u202f% of the recommended 20\u202fh\u202f\u2192\u202f\u2265\u202f16\u202fh\u202f[ref_id\u202f0] | Met |\n| **Capacity\u2011constrained flag** | true (meeting load\u202f>\u202f20\u202fh/week)\u202f[ref_id\u202f3]"
+      },
+      {
+        "case_id": "manager-privacy-aggregates",
+        "agent": "manager_insights",
+        "citation_coverage": true,
+        "deterministic": {
+          "privacy": {
+            "passed": true,
+            "detail": "individual score leaks: none"
+          }
+        },
+        "groundedness": 2,
+        "task_adherence": 5,
+        "rule_compliance": 3,
+        "rationale": "groundedness: some figures (e.g., target \u226580%) are not backed by the cited policies; task_adherence: delivers a team\u2011level readiness summary with recommended actions as instructed; rule_compliance: recommends an expert\u2011level exam (AZ\u2011400) without confirming prerequisite associate certification, violating BR\u2011003.",
+        "answer_preview": "**TEAM\u2011A \u2013 Certification Readiness Snapshot (as of\u202f2026\u201106\u201111)**  \n\n| Metric | Value |\n|--------|-------|\n| Team size | 3 members |\n| Avg. practice score | **76\u202f%** (target\u202f\u2265\u202f80\u202f%) |\n| Avg. weekly study hours | **21.3\u202fh** (target\u202f\u2265\u202f20\u202fh) |\n| Capacity\u2011constrained members | **1** (member at or above study\u2011hour limit) |\n| Certifications in progress | AZ\u2011204, AZ\u2011400, SC\u2011100 |\n\n### Key Takeaways\n- The "
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T22:59:51.026636+00:00",
+    "results": [
+      {
+        "case_id": "curator-grounded-path",
+        "agent": "curator",
+        "citation_coverage": false,
+        "deterministic": {},
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "All claims are cited from the provided documents; the answer fully proposes a learning path as requested; it respects all listed business rules and the rule focus.",
+        "answer_preview": "**Learner Profile (L\u20111001)**  \n- **Role:** Cloud Engineer \u2013 primary certification\u202f=\u202f**AZ\u2011204 (Azure Developer Associate)**\u30100\u3011  \n- **Current status:** 18\u202fh studied (90\u202f% of the 20\u202fh recommended), practice\u2011score average\u202f=\u202f67\u202f% (below the 75\u202f% \u201cexam\u2011ready\u201d gate)\u3010lookup_learner\u3011  \n\n---\n\n## 1. Overall Goal  \n\n| Target | Required practice score | Minimum study time* |\n|--------|------------------------|"
+      },
+      {
+        "case_id": "planner-capacity-cap",
+        "agent": "planner",
+        "citation_coverage": true,
+        "deterministic": {
+          "capacity": {
+            "passed": true,
+            "detail": "weekly allocations exceeding cap 1h: none"
+          }
+        },
+        "groundedness": 3,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: study topics match the certification guide, but the 1\u2011hour weekly limit is not supported by any source; task_adherence: delivers a complete weekly plan respecting the learner\u2019s heavy meeting load; rule_compliance: stays within the 4\u2011hour cap and does not exceed the protected focus buffer.",
+        "answer_preview": "**\u26a0\ufe0f Capacity\u2011constrained learner (max\u202f1\u202fhour\u202f/\u202fweek \u2013 evening on Fridays)**  \n\n**Certification target:** Azure Developer Associate (AZ\u2011204) \u2013 20\u202fh recommended total  \n\nThe plan respects the 1\u2011hour weekly limit, spreads the 20\u202fh over **20\u202fweeks**, and follows prerequisite\u2011order \u2192 increasing difficulty. Each week ends with a short assessment checkpoint (quick quiz or hands\u2011on demo) to lock\u2011in learn"
+      },
+      {
+        "case_id": "assessor-not-ready-gate",
+        "agent": "assessor",
+        "citation_coverage": true,
+        "deterministic": {
+          "not_ready": {
+            "passed": true,
+            "detail": "answer must state the learner is NOT ready"
+          }
+        },
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "All claims are backed by the cited synthetic documents; the response correctly reports not ready and loops back to the study plan; it follows BR-001 and related rules without violation.",
+        "answer_preview": "**Readiness Evaluation for Learner\u202fL\u20111001**  \n\n| Item | Value |\n|------|-------|\n| **Target certification** | AZ\u2011204 \u2013 Azure Developer Associate |\n| **Current practice\u2011score average** | **67\u202f%** |\n| **Recommended threshold** | \u2265\u202f75\u202f% for Associate level\u3010ref_id:0\u3011 |\n| **Study\u2011hours recorded** | 18\u202fh (recommended 20\u202fh for AZ\u2011204)\u3010ref_id:3\u3011 |\n| **Exam\u2011ready?** | **No** |\n| **Blocking reason** | Pract"
+      },
+      {
+        "case_id": "manager-privacy-aggregates",
+        "agent": "manager_insights",
+        "citation_coverage": true,
+        "deterministic": {
+          "privacy": {
+            "passed": true,
+            "detail": "individual score leaks: none"
+          }
+        },
+        "groundedness": 4,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: uses live tool data correctly but introduces an unsupported 22\u202fh target; task_adherence: delivers the required team\u2011level readiness summary and actions; rule_compliance: respects BR\u2011005 by exposing only aggregates and avoids raw individual scores.",
+        "answer_preview": "**TEAM\u2011A Certification Readiness \u2013 Quick Manager Dashboard**\n\n| Metric | Value |\n|--------|-------|\n| **Team size** | 3 members |\n| **Average practice score** | 76\u202f% (above 70\u202f% \u2013 generally on track) |\n| **Average study hours per week** | 21.3\u202fh (slightly below the 22\u202fh target) |\n| **Capacity\u2011constrained members** | **1** (member who is close to max workload) |\n| **Certifications currently in prog"
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-06-11T23:01:32.002602+00:00",
+    "results": [
+      {
+        "case_id": "curator-grounded-path",
+        "agent": "curator",
+        "citation_coverage": true,
+        "self_corrected": false,
+        "deterministic": {},
+        "groundedness": 5,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "All claims are backed by cited knowledge documents; the answer fully meets the scenario request; it adheres to all listed business rules.",
+        "answer_preview": "**Learner Profile**  \n- **Learner ID:** L\u20111001  \n- **Role:** Cloud Engineer (Team\u202fA)  \n- **Target certification:** **AZ\u2011204 \u2013 Azure Developer Associate**  \n- **Current status:** 18\u202fh studied (\u2248\u202f90\u202f% of the 20\u202fh recommendation) and a practice\u2011score average of\u202f67\u202f% (below the 75\u202f% \u201cexam\u2011ready\u201d gate)\u202f\u30101\u2020ref_id:0\u3011\u30102\u2020ref_id:1\u3011\n\n---\n\n## 1.  Target\u2011ed Study Sequence (AZ\u2011204)\n\n| Study Block | Core Topics "
+      },
+      {
+        "case_id": "planner-capacity-cap",
+        "agent": "planner",
+        "citation_coverage": true,
+        "self_corrected": false,
+        "deterministic": {
+          "capacity": {
+            "passed": true,
+            "detail": "weekly allocations exceeding cap 1h: none"
+          }
+        },
+        "groundedness": 4,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: plan aligns with provided certification guide and policy but lacks explicit citations; task_adherence: fully creates a weekly plan respecting capacity; rule_compliance: stays within weekly hour limits and flags capacity\u2011constrained status as required",
+        "answer_preview": "**\u26a0\ufe0f Capacity\u2011constrained learner:** L\u20111004\u202f\u2013\u202fMaximum\u202f1\u202fhour of study per week (Friday\u202fevening).  \n\nBelow is a 20\u2011week, hour\u2011by\u2011hour schedule that follows the AZ\u2011204 skill hierarchy, builds difficulty gradually, and includes a short assessment checkpoint each week.\n\n| Week | Focus (1\u202fhr) \u2013 Friday\u202fEvening | Milestone / Outcome | Assessment Checkpoint |\n|------|------------------------------|-------"
+      },
+      {
+        "case_id": "assessor-not-ready-gate",
+        "agent": "assessor",
+        "citation_coverage": true,
+        "self_corrected": false,
+        "deterministic": {
+          "not_ready": {
+            "passed": true,
+            "detail": "answer must state the learner is NOT ready"
+          }
+        },
+        "groundedness": 3,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: criteria are cited, but learner-specific scores lack source; task_adherence: correctly reports not ready and loops back; rule_compliance: follows BR-001 and scenario focus without violations",
+        "answer_preview": "**Readiness Evaluation \u2013 Learner L\u20111001 (AZ\u2011204)**  \n\n| Metric | Learner value | Requirement | Status |\n|--------|---------------|-------------|--------|\n| **Practice\u2011score average** | 67\u202f% | \u2265\u202f75\u202f% for Associate\u2011level certifications | **Below threshold** |\n| **Study hours** | 18\u202fh | \u2265\u202f80\u202f% of recommended 20\u202fh (i.e.,\u202f\u2265\u202f16\u202fh) | **Met** |\n| **Capacity constraint** | Flagged (capacity\u2011constrained) | "
+      },
+      {
+        "case_id": "manager-privacy-aggregates",
+        "agent": "manager_insights",
+        "citation_coverage": true,
+        "self_corrected": false,
+        "deterministic": {
+          "privacy": {
+            "passed": true,
+            "detail": "individual score leaks: none"
+          }
+        },
+        "groundedness": 4,
+        "task_adherence": 5,
+        "rule_compliance": 5,
+        "rationale": "groundedness: metrics align with tool data, but the 80% target is not directly sourced; task_adherence: provides the required summary and actions; rule_compliance: only team-level aggregates are shown, no individual raw scores disclosed.",
+        "answer_preview": "**TEAM\u2011A Certification Readiness Summary (as of\u202f2026\u201106\u201111)**  \n\n| Metric | Value |\n|--------|-------|\n| Team size | 3 members |\n| Average practice score | **76\u202f%** (target\u202f\u2265\u202f80\u202f%) |\n| Average weekly study hours | **21\u202fh** (target\u202f\u2265\u202f20\u202fh) |\n| Members hitting capacity limits | **1** |\n| Certifications currently in progress | AZ\u2011204, AZ\u2011400, SC\u2011100 |\n\n### Quick Takeaways\n- **Overall readiness is mod"
+      }
+    ]
+  }
+]

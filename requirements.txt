@@ -1,0 +1,12 @@
+agent-framework
+azure-ai-projects
+azure-identity
+# Preview SDK: exposes the Foundry IQ Knowledge Base surface (2026-05-01-preview)
+azure-search-documents>=12.1.0b1
+openai
+python-dotenv
+httpx
+rich
+# Web app backend
+fastapi
+uvicorn

@@ -1,0 +1,13 @@
+{
+  "_disclaimer": "SYNTHETIC DATA - For demonstration only. All identifiers, names and records are fabricated. No real employee or customer data.",
+  "learners": [
+    { "learner_id": "L-1001", "team": "TEAM-A", "role": "Cloud Engineer",  "certification_target": "AZ-204", "practice_score_avg": 67, "hours_studied": 18, "assessments_taken": 3, "last_exam_outcome": "Fail" },
+    { "learner_id": "L-1002", "team": "TEAM-A", "role": "DevOps Engineer", "certification_target": "AZ-400", "practice_score_avg": 82, "hours_studied": 24, "assessments_taken": 4, "last_exam_outcome": "Pass" },
+    { "learner_id": "L-1003", "team": "TEAM-B", "role": "Data Engineer",   "certification_target": "DP-203", "practice_score_avg": 74, "hours_studied": 20, "assessments_taken": 2, "last_exam_outcome": "Pass" },
+    { "learner_id": "L-1004", "team": "TEAM-B", "role": "Cloud Engineer",  "certification_target": "AZ-204", "practice_score_avg": 58, "hours_studied": 9,  "assessments_taken": 1, "last_exam_outcome": "NotTaken" },
+    { "learner_id": "L-1005", "team": "TEAM-A", "role": "Security Engineer","certification_target": "SC-100", "practice_score_avg": 79, "hours_studied": 22, "assessments_taken": 3, "last_exam_outcome": "NotTaken" },
+    { "learner_id": "L-1006", "team": "TEAM-C", "role": "Data Engineer",   "certification_target": "DP-203", "practice_score_avg": 61, "hours_studied": 12, "assessments_taken": 2, "last_exam_outcome": "Fail" },
+    { "learner_id": "L-1007", "team": "TEAM-C", "role": "DevOps Engineer", "certification_target": "AZ-400", "practice_score_avg": 88, "hours_studied": 30, "assessments_taken": 5, "last_exam_outcome": "Pass" },
+    { "learner_id": "L-1008", "team": "TEAM-B", "role": "Cloud Engineer",  "certification_target": "AZ-305", "practice_score_avg": 71, "hours_studied": 16, "assessments_taken": 2, "last_exam_outcome": "NotTaken" }
+  ]
+}
