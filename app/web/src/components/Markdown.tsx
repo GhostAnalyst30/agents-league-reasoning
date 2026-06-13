@@ -38,7 +38,7 @@ export default function Markdown({ text }: { text: string }) {
             <code className="rounded bg-white/10 px-1.5 py-0.5 font-mono text-[12px] text-cyan-300">{children}</code>
           ),
           table: ({ children }) => (
-            <div className="overflow-x-auto rounded-xl border border-white/10">
+            <div className="overflow-x-auto rounded-sm border border-white/10">
               <table className="w-full border-collapse text-left text-[12.5px]">{children}</table>
             </div>
           ),

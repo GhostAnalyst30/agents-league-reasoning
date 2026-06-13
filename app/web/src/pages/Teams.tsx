@@ -89,10 +89,10 @@ function MetricCard({
   const v = useCountUp(value, run)
   return (
     <div
-      className="cp-fade-up group rounded-3xl border border-white/[0.08] bg-white/[0.03] p-5 transition-colors hover:border-indigo-400/30"
+      className="cp-fade-up group rounded-md border border-white/[0.08] bg-white/[0.03] p-5 transition-colors hover:border-indigo-400/30"
       style={{ animationDelay: `${delay}ms` }}
     >
-      <span className={`grid size-10 place-items-center rounded-2xl ${tint}`}>
+      <span className={`grid size-10 place-items-center rounded-sm ${tint}`}>
         <Icon className="size-5" />
       </span>
       <p className="mt-3 font-heading text-3xl font-extrabold tabular-nums tracking-tight text-white">
@@ -182,16 +182,16 @@ export default function Teams() {
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <section className="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-5">
+        <section className="rounded-md border border-white/[0.08] bg-white/[0.03] p-5">
           <h3 className="font-heading text-sm font-bold text-white">Team readiness</h3>
           <p className="mb-4 text-xs text-slate-400">Aggregate readiness per team</p>
           <div className="flex flex-col gap-4">
             {teams.map((t, i) => (
               <div key={t.team} className="flex items-center gap-3">
                 <span className="w-28 shrink-0 text-sm font-medium text-slate-200">{t.team}</span>
-                <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
+                <div className="h-2.5 flex-1 overflow-hidden rounded-sm bg-white/[0.06]">
                   <div
-                    className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-cyan-400"
+                    className="h-full rounded-sm bg-gradient-to-r from-indigo-500 to-cyan-400"
                     style={{
                       width: ready ? `${t.avg_practice_score}%` : '0%',
                       transition: `width 1s cubic-bezier(0.22,1,0.36,1) ${i * 90}ms`,
@@ -207,7 +207,7 @@ export default function Teams() {
         </section>
 
         {certDistribution.length > 0 && (
-          <section className="rounded-3xl border border-white/[0.08] bg-white/[0.03] p-5">
+          <section className="rounded-md border border-white/[0.08] bg-white/[0.03] p-5">
             <h3 className="font-heading text-sm font-bold text-white">Certification distribution</h3>
             <p className="mb-4 text-xs text-slate-400">Active certifications by track</p>
             <DonutChart data={certDistribution} />
@@ -215,7 +215,7 @@ export default function Teams() {
         )}
       </div>
 
-      <div className="flex items-center gap-3 rounded-2xl border border-emerald-400/25 bg-emerald-500/8 px-4 py-3 text-sm text-emerald-300">
+      <div className="flex items-center gap-3 rounded-sm border border-emerald-400/25 bg-emerald-500/8 px-4 py-3 text-sm text-emerald-300">
         <ShieldCheck className="size-5 shrink-0" />
         <span>
           <span className="font-semibold">BR-005 enforced</span> — the manager view shows only team aggregates. No
@@ -243,13 +243,13 @@ export default function Teams() {
               </div>
 
               <div className="mt-4 space-y-2.5">
-                <div className="flex items-center justify-between rounded-lg bg-white/[0.03] px-3 py-2">
+                <div className="flex items-center justify-between rounded-sm bg-white/[0.03] px-3 py-2">
                   <span className="flex items-center gap-2 text-[12px] text-slate-400">
                     <Clock3 size={13} className={color.text} /> Avg study hours
                   </span>
                   <span className="text-[13px] font-semibold text-white">{team.avg_hours_studied}h</span>
                 </div>
-                <div className="flex items-center justify-between rounded-lg bg-white/[0.03] px-3 py-2">
+                <div className="flex items-center justify-between rounded-sm bg-white/[0.03] px-3 py-2">
                   <span className="flex items-center gap-2 text-[12px] text-slate-400">
                     <AlertTriangle size={13} className="text-amber-400" /> Capacity constrained
                   </span>
@@ -259,7 +259,7 @@ export default function Teams() {
                     {team.capacity_constrained_members}
                   </span>
                 </div>
-                <div className="rounded-lg bg-white/[0.03] px-3 py-2">
+                <div className="rounded-sm bg-white/[0.03] px-3 py-2">
                   <span className="flex items-center gap-2 text-[12px] text-slate-400">
                     <Award size={13} className={color.text} /> Certifications in progress
                   </span>

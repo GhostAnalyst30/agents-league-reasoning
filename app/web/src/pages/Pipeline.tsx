@@ -19,18 +19,18 @@ function stageStatus(agent: string, steps: PipelineStep[], verdicts: Verdict[]):
 function StatusBadge({ state }: { state: AgentStatus }) {
   if (state === 'running')
     return (
-      <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-500/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-indigo-300">
+      <span className="inline-flex items-center gap-1.5 rounded-sm bg-indigo-500/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-indigo-300">
         <span className="size-1.5 rounded-full bg-indigo-400 cp-blink" /> Running
       </span>
     )
   if (state === 'done')
     return (
-      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-emerald-300">
+      <span className="inline-flex items-center gap-1.5 rounded-sm bg-emerald-500/15 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-emerald-300">
         <Check className="size-3" /> Done
       </span>
     )
   return (
-    <span className="inline-flex items-center gap-1.5 rounded-full bg-white/[0.04] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-slate-500">
+    <span className="inline-flex items-center gap-1.5 rounded-sm bg-white/[0.04] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide text-slate-500">
       <span className="size-1.5 rounded-full bg-slate-600" /> Pending
     </span>
   )
@@ -53,13 +53,13 @@ function AgentCard({
 
   return (
     <div
-      className={`cp-fade-up relative flex items-start gap-4 rounded-3xl border bg-white/[0.03] p-4 transition-all ${
+      className={`cp-fade-up relative flex items-start gap-4 rounded-md border bg-white/[0.03] p-4 transition-all ${
         isRunning ? 'border-indigo-400/50 cp-breathe' : isDone ? 'border-emerald-400/40' : 'border-white/[0.08]'
       }`}
       style={{ animationDelay: `${index * 60}ms` }}
     >
       <div
-        className={`relative grid size-12 shrink-0 place-items-center rounded-2xl border ${meta.bg} ${meta.border} ${isRunning ? 'ring-4 ring-indigo-400/20' : ''}`}
+        className={`relative grid size-12 shrink-0 place-items-center rounded-sm border ${meta.bg} ${meta.border} ${isRunning ? 'ring-4 ring-indigo-400/20' : ''}`}
       >
         <Icon className={`size-5 ${meta.color}`} />
       </div>
@@ -105,15 +105,15 @@ function GateCard({ verdicts, running }: { verdicts: Verdict[]; running: boolean
   }
 
   return (
-    <div className="flex items-center gap-3 rounded-3xl border border-white/[0.08] bg-white/[0.03] p-4">
-      <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-cyan-500/15 text-cyan-300">
+    <div className="flex items-center gap-3 rounded-md border border-white/[0.08] bg-white/[0.03] p-4">
+      <span className="grid size-11 shrink-0 place-items-center rounded-sm bg-cyan-500/15 text-cyan-300">
         <ShieldCheck className="size-5" />
       </span>
       <div className="flex-1">
         <p className="font-heading text-sm font-bold text-white">Critic approval gate</p>
         <p className="text-xs text-slate-400">Reviews the full transcript against BR-001–BR-005 before release.</p>
       </div>
-      <span className={`rounded-full px-3 py-1.5 text-xs font-semibold ${cls}`}>
+      <span className={`rounded-sm px-3 py-1.5 text-xs font-semibold ${cls}`}>
         {approved && <Check className="mr-1 inline size-3.5" />}
         {label}
       </span>
@@ -126,9 +126,9 @@ export default function Pipeline() {
 
   return (
     <div className="flex flex-col gap-5">
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 to-cyan-600 p-6 text-white md:p-8">
+      <div className="relative overflow-hidden rounded-md bg-gradient-to-br from-indigo-600 to-cyan-600 p-6 text-white md:p-8">
         <div className="relative z-10 max-w-md">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide">
+          <span className="inline-flex items-center gap-1.5 rounded-sm bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide">
             6 agents · 1 critic gate
           </span>
           <h2 className="mt-3 font-heading text-2xl font-extrabold leading-tight md:text-3xl">
@@ -142,7 +142,7 @@ export default function Pipeline() {
           <button
             onClick={run}
             disabled={running}
-            className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm transition hover:brightness-95 disabled:opacity-70"
+            className="mt-4 inline-flex items-center gap-2 rounded-sm bg-white px-5 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm transition hover:brightness-95 disabled:opacity-70"
           >
             {running ? 'Running…' : 'Run the pipeline'}
           </button>
@@ -156,7 +156,7 @@ export default function Pipeline() {
       </div>
 
       {error && (
-        <div className="flex items-center gap-3 rounded-2xl border border-rose-400/30 bg-rose-500/10 p-4 text-sm text-rose-300">
+        <div className="flex items-center gap-3 rounded-sm border border-rose-400/30 bg-rose-500/10 p-4 text-sm text-rose-300">
           <XCircle size={18} /> {error}
         </div>
       )}

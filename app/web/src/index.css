@@ -19,7 +19,7 @@
     background: transparent;
   }
   ::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-white/10;
+    @apply rounded-sm bg-white/10;
   }
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-white/20;
@@ -28,14 +28,125 @@
 
 @layer components {
   .glass {
-    @apply rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm;
+    @apply rounded-md border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm;
   }
   .glass-hover {
     @apply transition-all duration-300 hover:border-indigo-400/30 hover:bg-white/[0.06];
   }
   .chip {
-    @apply inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-semibold;
+    @apply inline-flex items-center gap-1 rounded-sm px-2 py-0.5 text-[11px] font-semibold;
   }
+
+  /* Theme-aware utilities */
+  .theme-heading { @apply text-white; }
+  .theme-muted { @apply text-slate-400; }
+  .theme-surface {
+    @apply border-white/[0.06] bg-white/[0.04];
+  }
+  .theme-sidebar {
+    @apply border-white/[0.06] bg-ink-900/90;
+  }
+  .theme-divider { @apply border-white/[0.06]; }
+  .theme-input {
+    @apply border-white/[0.08] bg-ink-850 text-slate-200;
+  }
+  .theme-icon-btn {
+    @apply border-white/[0.08] bg-ink-850 text-slate-400 hover:text-slate-200;
+  }
+  .theme-nav { @apply text-slate-400 hover:bg-white/[0.04] hover:text-slate-200; }
+  .theme-nav-active { @apply bg-indigo-500/15 text-white; }
+  .theme-nav-hover { @apply hover:text-slate-300; }
+  .theme-menu-panel {
+    @apply border-white/[0.08] bg-ink-900 text-slate-200;
+  }
+  .theme-option {
+    @apply border-white/[0.08] bg-white/[0.03] text-slate-300 hover:border-indigo-400/30;
+  }
+  .theme-option-active {
+    @apply border-indigo-400/40 bg-indigo-500/15 text-white;
+  }
+  .theme-promo {
+    @apply border-indigo-400/20 bg-indigo-500/[0.06];
+  }
+}
+
+/* Light theme */
+[data-theme='light'] body {
+  @apply bg-slate-50 text-slate-800;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(99, 102, 241, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 90% 0%, rgba(34, 211, 238, 0.06), transparent);
+}
+
+[data-theme='light'] ::-webkit-scrollbar-thumb {
+  @apply bg-slate-300;
+}
+[data-theme='light'] ::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+[data-theme='light'] .glass {
+  @apply border-slate-200/90 bg-white/90 shadow-sm;
+}
+[data-theme='light'] .glass-hover {
+  @apply hover:border-indigo-300 hover:bg-white;
+}
+
+[data-theme='light'] .theme-heading { @apply text-slate-900; }
+[data-theme='light'] .theme-muted { @apply text-slate-500; }
+[data-theme='light'] .theme-surface {
+  @apply border-slate-200 bg-white;
+}
+[data-theme='light'] .theme-sidebar {
+  @apply border-slate-200 bg-white/95;
+}
+[data-theme='light'] .theme-divider { @apply border-slate-200; }
+[data-theme='light'] .theme-input {
+  @apply border-slate-200 bg-white text-slate-800;
+}
+[data-theme='light'] .theme-icon-btn {
+  @apply border-slate-200 bg-white text-slate-500 hover:text-slate-800;
+}
+[data-theme='light'] .theme-nav { @apply text-slate-500 hover:bg-slate-100 hover:text-slate-800; }
+[data-theme='light'] .theme-nav-active { @apply bg-indigo-50 text-indigo-700; }
+[data-theme='light'] .theme-nav-hover { @apply hover:text-slate-700; }
+[data-theme='light'] .theme-menu-panel {
+  @apply border-slate-200 bg-white text-slate-800;
+}
+[data-theme='light'] .theme-option {
+  @apply border-slate-200 bg-slate-50 text-slate-600 hover:border-indigo-300;
+}
+[data-theme='light'] .theme-option-active {
+  @apply border-indigo-300 bg-indigo-50 text-indigo-700;
+}
+[data-theme='light'] .theme-promo {
+  @apply border-indigo-200 bg-indigo-50/80;
+}
+
+[data-theme='light'] .app-shell .text-white {
+  color: #0f172a;
+}
+[data-theme='light'] .app-shell .text-slate-200 {
+  color: #334155;
+}
+[data-theme='light'] .app-shell .text-slate-300 {
+  color: #475569;
+}
+[data-theme='light'] .app-shell .text-slate-400,
+[data-theme='light'] .app-shell .text-slate-500,
+[data-theme='light'] .app-shell .text-slate-600 {
+  color: #64748b;
+}
+
+[data-theme='light'] .ambient-layer {
+  opacity: 0.3;
+}
+
+[data-theme='light'] .cp-scroll {
+  scrollbar-color: rgba(15, 23, 42, 0.2) transparent;
+}
+[data-theme='light'] .cp-scroll::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.15);
 }
 
 @keyframes cp-fade-up {

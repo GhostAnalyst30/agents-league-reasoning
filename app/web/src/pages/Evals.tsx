@@ -72,7 +72,7 @@ export default function Evals() {
           <select
             value={selected}
             onChange={(e) => setSelected(Number(e.target.value))}
-            className="rounded-full border border-white/[0.08] bg-ink-850 px-4 py-2 text-[12px] text-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-400/15"
+            className="rounded-sm border border-white/[0.08] bg-ink-850 px-4 py-2 text-[12px] text-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-400/15"
           >
             {runs.map((r, i) => (
               <option key={i} value={i}>
@@ -89,7 +89,7 @@ export default function Evals() {
             {scoreRings.map((s, i) => (
               <div
                 key={s.label}
-                className="cp-fade-up flex flex-col items-center gap-3 rounded-3xl border border-white/[0.08] bg-white/[0.03] p-5"
+                className="cp-fade-up flex flex-col items-center gap-3 rounded-md border border-white/[0.08] bg-white/[0.03] p-5"
                 style={{ animationDelay: `${i * 70}ms` }}
               >
                 <CircularScore value={s.val} color={s.color} />
@@ -98,7 +98,7 @@ export default function Evals() {
             ))}
           </div>
 
-          <section className="overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.03]">
+          <section className="overflow-hidden rounded-md border border-white/[0.08] bg-white/[0.03]">
             <div className="border-b border-white/[0.06] px-5 py-4">
               <h3 className="font-heading text-sm font-bold text-white">Evaluation scenarios</h3>
               <p className="text-xs text-slate-400">Per-run quality scoring with auto-fix rounds</p>

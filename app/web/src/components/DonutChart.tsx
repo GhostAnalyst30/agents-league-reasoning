@@ -50,7 +50,7 @@ export function DonutChart({ data, size = 168 }: { data: Slice[]; size?: number 
       <ul className="grid w-full grid-cols-2 gap-x-4 gap-y-2">
         {data.map((d) => (
           <li key={d.label} className="flex items-center gap-2 text-xs">
-            <span className="size-2.5 shrink-0 rounded-full" style={{ background: d.color }} />
+            <span className="size-2.5 shrink-0 rounded-sm" style={{ background: d.color }} />
             <span className="text-slate-400">{d.label}</span>
             <span className="ml-auto font-medium tabular-nums text-white">
               {Math.round((d.value / total) * 100)}%

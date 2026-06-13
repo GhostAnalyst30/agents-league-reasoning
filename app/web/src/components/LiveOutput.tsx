@@ -80,7 +80,7 @@ export function LiveOutput({
   ]
 
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm">
+    <div className="flex h-full flex-col overflow-hidden rounded-md border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm">
       <div className="flex items-center gap-2 border-b border-white/[0.06] px-4 py-3">
         <span className={`size-2 rounded-full ${running ? 'bg-emerald-400 cp-blink' : 'bg-indigo-400'}`} />
         <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">Live output</span>
@@ -91,7 +91,7 @@ export function LiveOutput({
               <button
                 key={t.id}
                 onClick={() => setTab(t.id)}
-                className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium transition ${
+                className={`inline-flex items-center gap-1.5 rounded-sm px-2.5 py-1 text-[11px] font-medium transition ${
                   tab === t.id ? 'bg-indigo-500/15 text-indigo-300' : 'text-slate-500 hover:bg-white/[0.04]'
                 }`}
               >
@@ -126,7 +126,7 @@ export function LiveOutput({
         {tab === 'cites' && (
           <ul className="flex flex-col gap-2.5">
             {CITATIONS.map((c) => (
-              <li key={c.ref} className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-3">
+              <li key={c.ref} className="rounded-sm border border-white/[0.06] bg-white/[0.02] p-3">
                 <div className="flex items-center gap-2">
                   <span className="rounded bg-indigo-500/15 px-1.5 py-px font-mono text-[10px] text-indigo-300 ring-1 ring-indigo-400/25">
                     ref:{c.ref}
@@ -142,8 +142,8 @@ export function LiveOutput({
         {tab === 'rules' && (
           <ul className="flex flex-col gap-2">
             {BUSINESS_RULES.map((r) => (
-              <li key={r.id} className="flex items-start gap-3 rounded-2xl border border-white/[0.06] bg-white/[0.02] p-3">
-                <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-emerald-500/15 text-emerald-300">
+              <li key={r.id} className="flex items-start gap-3 rounded-sm border border-white/[0.06] bg-white/[0.02] p-3">
+                <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-sm bg-emerald-500/15 text-emerald-300">
                   <Check className="size-3" />
                 </span>
                 <div>

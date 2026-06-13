@@ -38,26 +38,26 @@ function AppShell() {
   }
 
   return (
-    <div className="relative flex h-dvh overflow-hidden">
+    <div className="app-shell relative flex h-dvh overflow-hidden">
       <AmbientBackground />
 
-      <aside className="z-10 flex w-[248px] shrink-0 flex-col gap-5 border-r border-white/[0.06] bg-ink-900/90 p-5 backdrop-blur-xl">
+      <aside className="theme-sidebar z-10 flex w-[248px] shrink-0 flex-col gap-5 border-r p-5 backdrop-blur-xl">
         <div className="flex items-center gap-3 px-1">
-          <div className="grid size-10 place-items-center rounded-2xl bg-gradient-to-br from-indigo-500 to-cyan-500 text-white shadow-lg shadow-indigo-500/30">
+          <div className="grid size-10 place-items-center rounded-sm bg-gradient-to-br from-indigo-500 to-cyan-500 text-white shadow-lg shadow-indigo-500/30">
             <GraduationCap className="size-5" strokeWidth={2.2} />
           </div>
           <div className="leading-tight">
-            <p className="font-heading text-base font-extrabold text-white">{PRODUCT_NAME}</p>
-            <p className="text-[11px] text-slate-500">{TAGLINE_SHORT}</p>
+            <p className="theme-heading font-heading text-base font-extrabold">{PRODUCT_NAME}</p>
+            <p className="theme-muted text-[11px]">{TAGLINE_SHORT}</p>
           </div>
         </div>
 
         {selectedLearner && (
-          <div className="flex items-center gap-3 rounded-3xl border border-white/[0.06] bg-white/[0.04] p-3">
+          <div className="theme-surface flex items-center gap-3 rounded-md border p-3">
             <img
               src="/images/avatar-ana.png"
               alt="Active learner"
-              className="size-12 rounded-2xl object-cover"
+              className="size-12 rounded-sm object-cover"
             />
             <div className="min-w-0 leading-tight">
               <p className="text-[11px] text-slate-500">Active learner</p>
@@ -70,7 +70,7 @@ function AppShell() {
         )}
 
         <nav className="flex flex-col gap-1">
-          <p className="px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-500">Workspace</p>
+          <p className="theme-muted px-3 pb-1 text-[10px] font-semibold uppercase tracking-[0.14em]">Workspace</p>
           {NAV.map((item) => {
             const isActive = page === item.id
             const Icon = item.icon
@@ -80,10 +80,8 @@ function AppShell() {
                 type="button"
                 onClick={() => setPage(item.id)}
                 aria-current={isActive ? 'page' : undefined}
-                className={`group relative flex items-center gap-3 rounded-2xl px-3 py-2.5 text-sm transition-colors ${
-                  isActive
-                    ? 'bg-indigo-500/15 font-semibold text-white'
-                    : 'text-slate-400 hover:bg-white/[0.04] hover:text-slate-200'
+                className={`theme-nav group relative flex items-center gap-3 rounded-sm px-3 py-2.5 text-sm transition-colors ${
+                  isActive ? 'theme-nav-active font-semibold' : ''
                 }`}
               >
                 {isActive && (
@@ -95,7 +93,7 @@ function AppShell() {
                 <Icon className="size-[18px] shrink-0" />
                 <span>{item.label}</span>
                 {'badge' in item && item.badge && (
-                  <span className="ml-auto rounded-full bg-indigo-500/25 px-2 py-0.5 text-[10px] font-semibold text-indigo-200">
+                  <span className="ml-auto rounded-sm bg-indigo-500/25 px-2 py-0.5 text-[10px] font-semibold text-indigo-200">
                     {item.badge}
                   </span>
                 )}
@@ -104,19 +102,19 @@ function AppShell() {
           })}
         </nav>
 
-        <div className="mt-auto rounded-3xl border border-white/[0.06] bg-gradient-to-b from-white/[0.05] to-white/[0.02] p-4">
+        <div className="theme-surface mt-auto rounded-md border bg-gradient-to-b p-4">
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">
+            <span className="theme-muted text-[11px] font-semibold uppercase tracking-wide">
               {running ? 'Running' : 'Idle'}
             </span>
             <span className={`size-2 rounded-full ${running ? 'bg-emerald-400 cp-blink' : 'bg-slate-600'}`} />
           </div>
-          <p className="mt-1 font-heading text-sm font-bold text-white">Live pipeline</p>
+          <p className="theme-heading mt-1 font-heading text-sm font-bold">Live pipeline</p>
           <div className="mt-3 flex h-10 items-end gap-1" aria-hidden>
             {Array.from({ length: 10 }, (_, i) => (
               <span
                 key={i}
-                className="w-1.5 flex-1 rounded-full bg-indigo-400/70"
+                className="w-1.5 flex-1 rounded-sm bg-indigo-400/70"
                 style={{
                   height: running ? '100%' : '30%',
                   animation: running ? `cp-equalizer ${0.7 + (i % 4) * 0.18}s ease-in-out ${i * 0.05}s infinite` : 'none',
@@ -125,20 +123,20 @@ function AppShell() {
               />
             ))}
           </div>
-          <p className="mt-3 text-[11px] text-slate-500">Critic gate guarding BR-001–BR-005</p>
+          <p className="theme-muted mt-3 text-[11px]">Critic gate guarding BR-001–BR-005</p>
         </div>
 
-        <div className="border-t border-white/[0.06] pt-4">
-          <div className="flex items-center gap-2 px-1 text-[11px] font-medium text-slate-500">
+        <div className="theme-divider border-t pt-4">
+          <div className="theme-muted flex items-center gap-2 px-1 text-[11px] font-medium">
             <ShieldCheck size={13} className="text-emerald-400" />
             Grounded in Foundry IQ
           </div>
-          <div className="mt-1 px-1 text-[10.5px] text-slate-600">Microsoft Agents League 2026</div>
-          <div className="mt-3 flex items-center justify-between px-1 text-slate-500">
-            <button className="flex items-center gap-2 text-xs transition-colors hover:text-slate-300">
+          <div className="theme-muted mt-1 px-1 text-[10.5px] opacity-80">Microsoft Agents League 2026</div>
+          <div className="theme-muted mt-3 flex items-center justify-between px-1">
+            <button className="theme-nav-hover flex items-center gap-2 text-xs transition-colors">
               <Settings className="size-4" /> Settings
             </button>
-            <button className="flex items-center gap-2 text-xs transition-colors hover:text-slate-300">
+            <button className="theme-nav-hover flex items-center gap-2 text-xs transition-colors">
               <LifeBuoy className="size-4" /> Help
             </button>
           </div>

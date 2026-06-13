@@ -73,14 +73,14 @@ export default function AgentsChat() {
                 setAgent(key)
                 setInput(SUGGESTIONS[key])
               }}
-              className={`rounded-2xl border p-3 text-left transition-all ${
+              className={`rounded-sm border p-3 text-left transition-all ${
                 active
                   ? `${info.border} ${info.bg} border`
                   : 'border-white/[0.06] bg-white/[0.02] hover:border-white/[0.1]'
               }`}
             >
               <div className="flex items-center gap-2">
-                <div className={`grid size-8 place-items-center rounded-xl border ${info.bg} ${info.border}`}>
+                <div className={`grid size-8 place-items-center rounded-sm border ${info.bg} ${info.border}`}>
                   <Icon size={14} className={info.color} />
                 </div>
                 <span className="text-[12px] font-semibold text-white">{info.label.split(' ')[0]}</span>
@@ -98,7 +98,7 @@ export default function AgentsChat() {
               className={`cp-fade-up flex gap-3 ${m.role === 'user' ? 'flex-row-reverse' : ''}`}
             >
               <div
-                className={`grid size-9 shrink-0 place-items-center rounded-2xl ${
+                className={`grid size-9 shrink-0 place-items-center rounded-sm ${
                   m.role === 'agent'
                     ? 'bg-indigo-500/12 text-indigo-300'
                     : 'bg-gradient-to-r from-indigo-500 to-cyan-500 text-white'
@@ -112,10 +112,10 @@ export default function AgentsChat() {
               </div>
               <div className={`max-w-[80%] ${m.role === 'user' ? 'text-right' : ''}`}>
                 <div
-                  className={`rounded-3xl px-4 py-3 text-sm leading-relaxed ${
+                  className={`rounded-md px-4 py-3 text-sm leading-relaxed ${
                     m.role === 'agent'
-                      ? 'rounded-tl-md border border-white/[0.08] bg-white/[0.03] text-slate-200'
-                      : 'rounded-tr-md bg-gradient-to-r from-indigo-500 to-cyan-500 text-white'
+                      ? 'rounded-tl-sm border border-white/[0.08] bg-white/[0.03] text-slate-200'
+                      : 'rounded-tr-sm bg-gradient-to-r from-indigo-500 to-cyan-500 text-white'
                   }`}
                 >
                   {m.role === 'agent' ? <Markdown text={m.text} /> : m.text}
@@ -131,10 +131,10 @@ export default function AgentsChat() {
 
           {busy && (
             <div className="flex gap-3">
-              <div className="grid size-9 shrink-0 place-items-center rounded-2xl bg-indigo-500/12 text-indigo-300">
+              <div className="grid size-9 shrink-0 place-items-center rounded-sm bg-indigo-500/12 text-indigo-300">
                 <Loader2 className="size-4 animate-spin" />
               </div>
-              <div className="flex items-center gap-1 rounded-3xl rounded-tl-md border border-white/[0.08] bg-white/[0.03] px-4 py-3.5">
+              <div className="flex items-center gap-1 rounded-md rounded-tl-sm border border-white/[0.08] bg-white/[0.03] px-4 py-3.5">
                 <span className="size-1.5 animate-bounce rounded-full bg-indigo-400 [animation-delay:-0.2s]" />
                 <span className="size-1.5 animate-bounce rounded-full bg-indigo-400 [animation-delay:-0.1s]" />
                 <span className="size-1.5 animate-bounce rounded-full bg-indigo-400" />
@@ -149,7 +149,7 @@ export default function AgentsChat() {
               key={s}
               onClick={() => send(s)}
               disabled={busy}
-              className="rounded-full border border-white/[0.08] bg-white/[0.03] px-3 py-1.5 text-xs text-slate-400 transition hover:border-indigo-400/40 hover:text-slate-200 disabled:opacity-50"
+              className="rounded-sm border border-white/[0.08] bg-white/[0.03] px-3 py-1.5 text-xs text-slate-400 transition hover:border-indigo-400/40 hover:text-slate-200 disabled:opacity-50"
             >
               {s}
             </button>
@@ -161,7 +161,7 @@ export default function AgentsChat() {
             e.preventDefault()
             send()
           }}
-          className="flex items-end gap-2 rounded-3xl border border-white/[0.08] bg-white/[0.03] p-2 transition focus-within:border-indigo-400/50 focus-within:ring-2 focus-within:ring-indigo-400/15"
+          className="flex items-end gap-2 rounded-md border border-white/[0.08] bg-white/[0.03] p-2 transition focus-within:border-indigo-400/50 focus-within:ring-2 focus-within:ring-indigo-400/15"
         >
           <textarea
             rows={1}
@@ -180,7 +180,7 @@ export default function AgentsChat() {
             type="submit"
             aria-label="Send message"
             disabled={!input.trim() || busy}
-            className="grid size-10 shrink-0 place-items-center rounded-2xl bg-gradient-to-r from-indigo-500 to-cyan-500 text-white transition hover:brightness-110 disabled:opacity-50"
+            className="grid size-10 shrink-0 place-items-center rounded-sm bg-gradient-to-r from-indigo-500 to-cyan-500 text-white transition hover:brightness-110 disabled:opacity-50"
           >
             <ArrowUp className="size-5" />
           </button>
