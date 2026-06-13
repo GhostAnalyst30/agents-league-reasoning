@@ -1,7 +1,10 @@
-# CertPilot — 5-Minute Pitch
+# SkillPilot-AI — 5-Minute Pitch
 
+> **SkillPilot-AI** · *Reasoning Agents for Enterprise Certification*  
 > **Microsoft Agents League · Battle #2: Reasoning Agents**  
 > Estimated duration: **~5 minutes** (~650 words per language at conversational pace)
+
+**Tagline:** *Your skills pilot — grounded, validated, approved.*
 
 ---
 
@@ -10,7 +13,7 @@
 | Section | Time | EN | ES |
 |---------|------|----|----|
 | Hook & problem | 0:00 – 1:00 | Opening | Apertura |
-| Solution & demo | 1:00 – 2:30 | What CertPilot is | Qué es CertPilot |
+| Solution & demo | 1:00 – 2:30 | What SkillPilot-AI is | Qué es SkillPilot-AI |
 | Architecture | 2:30 – 3:30 | How it works | Cómo funciona |
 | Differentiators | 3:30 – 4:30 | Why it wins | Por qué destaca |
 | Close | 4:30 – 5:00 | Call to action | Cierre |
@@ -33,19 +36,19 @@ Every enterprise faces the same three failures:
 
 The result? Wasted budget, frustrated teams, and certifications that never translate into real capability.
 
-**Today, I want to show you CertPilot — and why we believe it fixes all three at once.**
+**Today, I want to show you SkillPilot-AI — and why we believe it fixes all three at once.**
 
 ---
 
-## The Solution — Meet CertPilot (1:00 – 2:00)
+## The Solution — Meet SkillPilot-AI (1:00 – 2:00)
 
-CertPilot is a **multi-agent reasoning system** that takes an employee from *"I want to get certified"* to **exam-ready** — with every recommendation grounded in approved knowledge, every plan validated against business rules, and every answer **gated by a critic before it ships**.
+SkillPilot-AI is a **multi-agent reasoning system** that takes an employee from *"I want to get certified"* to **exam-ready** — with every recommendation grounded in approved knowledge, every plan validated against business rules, and every answer **gated by a critic before it ships**.
 
 This is not a chatbot with a certification skin.
 
 This is **six specialized AI agents** working as a team, sharing one grounded brain, orchestrated by the **Microsoft Agent Framework** and **Microsoft Foundry**.
 
-When a learner asks for help, CertPilot does not guess. It **reasons**, **retrieves**, **plans**, **assesses**, and **verifies** — in a live pipeline you can watch in real time.
+When a learner asks for help, SkillPilot-AI does not guess. It **reasons**, **retrieves**, **plans**, **assesses**, and **verifies** — in a live pipeline you can watch in real time.
 
 ---
 
@@ -70,7 +73,7 @@ In our tests, the Critic caught a rule violation in round one — and approved o
 
 ## How It Works — The Architecture (2:30 – 3:30)
 
-Three layers make CertPilot enterprise-ready:
+Three layers make SkillPilot-AI enterprise-ready:
 
 ### 1. Foundry IQ — The Grounding Layer
 Four synthetic enterprise documents — certification guide, assessment policy, quarterly learning report, workload insights — are ingested into a **Knowledge Base** on Azure AI Search. Agents retrieve through the native **MCP endpoint** and must preserve `[ref_id:N]` citations. An uncited claim gets **rejected**.
@@ -92,9 +95,9 @@ We also ship a **self-evaluation harness** that scores groundedness, task adhere
 
 ---
 
-## Why CertPilot Wins (3:30 – 4:30)
+## Why SkillPilot-AI Wins (3:30 – 4:30)
 
-| What others do | What CertPilot does |
+| What others do | What SkillPilot-AI does |
 |----------------|---------------------|
 | Single chatbot, one persona | **Six specialized reasoning agents** with clear responsibilities |
 | Answers from model memory | **Foundry IQ retrieval** with mandatory citations |
@@ -114,9 +117,9 @@ Enterprises do not fail at certifications because people lack motivation.
 
 They fail because **the system around the learner is broken** — generic, ungrounded, and unaccountable.
 
-**CertPilot** replaces that broken system with specialized agents that share one grounded brain, enforce real business rules, and earn trust through a critic gate and measurable evals.
+**SkillPilot-AI** replaces that broken system with specialized agents that share one grounded brain, enforce real business rules, and earn trust through a critic gate and measurable evals.
 
-> *From "I want to get certified" to exam-ready — grounded, validated, and approved.*
+> *Your skills pilot — grounded, validated, approved.*
 
 **Thank you.** Happy to run a live pipeline or walk through the architecture.
 
@@ -151,19 +154,19 @@ Toda empresa enfrenta los mismos tres fallos:
 
 ¿El resultado? Presupuesto desperdiciado, equipos frustrados y certificaciones que nunca se traducen en capacidad real.
 
-**Hoy quiero mostrarles CertPilot — y por qué creemos que resuelve los tres problemas a la vez.**
+**Hoy quiero mostrarles SkillPilot-AI — y por qué creemos que resuelve los tres problemas a la vez.**
 
 ---
 
-## La Solución — Conozcan CertPilot (1:00 – 2:00)
+## La Solución — Conozcan SkillPilot-AI (1:00 – 2:00)
 
-CertPilot es un **sistema multi-agente de razonamiento** que lleva a un empleado de *"quiero certificarme"* a **listo para el examen** — con cada recomendación fundamentada en conocimiento aprobado, cada plan validado contra reglas de negocio, y cada respuesta **filtrada por un crítico antes de llegar al usuario**.
+SkillPilot-AI es un **sistema multi-agente de razonamiento** que lleva a un empleado de *"quiero certificarme"* a **listo para el examen** — con cada recomendación fundamentada en conocimiento aprobado, cada plan validado contra reglas de negocio, y cada respuesta **filtrada por un crítico antes de llegar al usuario**.
 
 Esto no es un chatbot con apariencia de certificación.
 
 Son **seis agentes de IA especializados** trabajando en equipo, compartiendo un cerebro fundamentado, orquestados con **Microsoft Agent Framework** y **Microsoft Foundry**.
 
-Cuando un learner pide ayuda, CertPilot no adivina. **Razona**, **recupera**, **planifica**, **evalúa** y **verifica** — en un pipeline en vivo que pueden observar en tiempo real.
+Cuando un learner pide ayuda, SkillPilot-AI no adivina. **Razona**, **recupera**, **planifica**, **evalúa** y **verifica** — en un pipeline en vivo que pueden observar en tiempo real.
 
 ---
 
@@ -188,7 +191,7 @@ En nuestras pruebas, el Critic detectó una violación en la ronda uno — y apr
 
 ## Cómo Funciona — La Arquitectura (2:30 – 3:30)
 
-Tres capas hacen a CertPilot listo para empresa:
+Tres capas hacen a SkillPilot-AI listo para empresa:
 
 ### 1. Foundry IQ — La Capa de Grounding
 Cuatro documentos empresariales sintéticos — guía de certificación, política de evaluación, reporte trimestral, insights de carga de trabajo — se ingieren en una **Knowledge Base** en Azure AI Search. Los agentes recuperan vía **MCP** y deben preservar citas `[ref_id:N]`. Una afirmación sin cita es **rechazada**.
@@ -210,9 +213,9 @@ También incluimos un **harness de auto-evaluación** que puntúa groundedness, 
 
 ---
 
-## Por Qué CertPilot Destaca (3:30 – 4:30)
+## Por Qué SkillPilot-AI Destaca (3:30 – 4:30)
 
-| Lo que otros hacen | Lo que hace CertPilot |
+| Lo que otros hacen | Lo que hace SkillPilot-AI |
 |--------------------|------------------------|
 | Un solo chatbot | **Seis agentes de razonamiento** con responsabilidades claras |
 | Respuestas de memoria del modelo | **Retrieval con Foundry IQ** y citas obligatorias |
@@ -232,9 +235,9 @@ Las empresas no fallan en certificaciones porque la gente no tenga motivación.
 
 Fallan porque **el sistema alrededor del learner está roto** — genérico, sin fundamento y sin rendición de cuentas.
 
-**CertPilot** reemplaza ese sistema con agentes especializados que comparten un cerebro fundamentado, aplican reglas de negocio reales y ganan confianza mediante un critic gate y evals medibles.
+**SkillPilot-AI** reemplaza ese sistema con agentes especializados que comparten un cerebro fundamentado, aplican reglas de negocio reales y ganan confianza mediante un critic gate y evals medibles.
 
-> *De "quiero certificarme" a listo para el examen — fundamentado, validado y aprobado.*
+> *Tu piloto de skills — fundamentado, validado y aprobado.*
 
 **Gracias.** Con gusto ejecuto un pipeline en vivo o recorro la arquitectura con ustedes.
 
@@ -270,7 +273,7 @@ Fallan porque **el sistema alrededor del learner está roto** — genérico, sin
 
 # Optional Slides Outline (10 slides)
 
-1. **Title** — CertPilot: Reasoning Agents for Enterprise Certification  
+1. **Title** — SkillPilot-AI: Reasoning Agents for Enterprise Certification · *Your skills pilot — grounded, validated, approved.*
 2. **The Problem** — $2M spent, 23% completion, three failure modes  
 3. **The Vision** — From intent to exam-ready, grounded and governed  
 4. **Six Agents** — Pipeline diagram (use `img/image1.png`)  

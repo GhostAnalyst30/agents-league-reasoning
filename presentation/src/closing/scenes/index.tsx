@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import AgentOrbit from '../../shared/components/AgentOrbit'
+import { HERO_LINE, PITCH_TAGLINE } from '../../shared/branding'
 import CinematicText from '../../shared/components/CinematicText'
 import GlowLogo from '../../shared/components/GlowLogo'
 import ParticleField from '../../shared/components/ParticleField'
@@ -134,7 +135,10 @@ export function HeroTagline() {
     <div className="text-center">
       <GlowLogo size="lg" />
       <CinematicText className="mt-8 max-w-3xl text-2xl font-semibold text-slate-300 md:text-3xl" as="p" delay={0.4}>
-        From &ldquo;I want to get certified&rdquo; to exam-ready.
+        {HERO_LINE}
+      </CinematicText>
+      <CinematicText className="mt-4 max-w-2xl text-lg font-medium text-slate-500 md:text-xl" as="p" delay={0.7}>
+        {PITCH_TAGLINE}
       </CinematicText>
     </div>
   )

@@ -1,5 +1,5 @@
 kind: hosted
-name: certpilot-sample-agent
+name: skillpilot-ai-sample-agent
 protocols:
   - protocol: responses
     version: 1.0.0

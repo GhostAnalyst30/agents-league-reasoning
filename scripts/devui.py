@@ -1,4 +1,4 @@
-"""Launch the Agent Framework DevUI with all six CertPilot agents.
+"""Launch the Agent Framework DevUI with all six SkillPilot-AI agents.
 
 Opens a browser chat UI where each agent can be selected and exercised
 individually, with full visibility of tool calls (including Foundry IQ
@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from agent_framework.devui import serve
 
-from certpilot.agents import build_agents, make_kb_tool
+from skillpilot_ai.agents import build_agents, make_kb_tool
 
 
 def main() -> None:

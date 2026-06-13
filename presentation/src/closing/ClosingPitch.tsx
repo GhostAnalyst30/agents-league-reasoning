@@ -1,6 +1,7 @@
 import PitchShell from '../shared/layout/PitchShell'
 import SceneOrchestrator from '../shared/layout/SceneOrchestrator'
 import { useSceneNav } from '../shared/hooks/useSceneNav'
+import { PRODUCT_NAME } from '../shared/branding'
 import {
   AgentOrbitScene,
   Approved,
@@ -55,7 +56,7 @@ export default function ClosingPitch() {
       interacted={interacted}
       onNext={next}
       onPrev={prev}
-      title="CertPilot · Closing"
+      title={`${PRODUCT_NAME} · Closing`}
       burst={isShatter}
     >
       <SceneOrchestrator sceneKey={SCENES[index].id}>

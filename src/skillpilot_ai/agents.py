@@ -1,4 +1,4 @@
-"""Agent definitions for the CertPilot multi-agent system.
+"""Agent definitions for the SkillPilot-AI multi-agent system.
 
 Six specialised agents built with Microsoft Agent Framework. The Foundry IQ
 knowledge base is attached as an MCP tool to the Curator and Assessment agents

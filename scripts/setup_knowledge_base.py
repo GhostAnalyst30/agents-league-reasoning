@@ -1,4 +1,4 @@
-"""One-time setup: create the Foundry IQ Knowledge Base for CertPilot.
+"""One-time setup: create the Foundry IQ Knowledge Base for SkillPilot-AI.
 
 Creates a File knowledge source, uploads the synthetic knowledge documents,
 and assembles a Knowledge Base with agentic retrieval. Run once:
@@ -61,7 +61,7 @@ def embedding_vectorizer() -> KnowledgeSourceAzureOpenAIVectorizer:
 def create_knowledge_source() -> None:
     ks = FileKnowledgeSource(
         name=KS_NAME,
-        description="CertPilot synthetic enterprise learning documents (certification guides, policies, reports).",
+        description="SkillPilot-AI synthetic enterprise learning documents (certification guides, policies, reports).",
         file_parameters=FileKnowledgeSourceParameters(
             ingestion_parameters=KnowledgeSourceIngestionParameters(
                 content_extraction_mode="minimal",
@@ -118,7 +118,7 @@ def create_knowledge_base() -> None:
     )
     synthesis_kb = KnowledgeBase(
         name=KB_NAME,
-        description="CertPilot enterprise learning knowledge base with agentic retrieval and citations.",
+        description="SkillPilot-AI enterprise learning knowledge base with agentic retrieval and citations.",
         models=[KnowledgeBaseAzureOpenAIModel(azure_open_ai_parameters=chat_params)],
         knowledge_sources=[KnowledgeSourceReference(name=KS_NAME)],
         retrieval_reasoning_effort=KnowledgeRetrievalLowReasoningEffort(),
@@ -138,7 +138,7 @@ def create_knowledge_base() -> None:
 
     extractive_kb = KnowledgeBase(
         name=KB_NAME,
-        description="CertPilot enterprise learning knowledge base (extractive retrieval).",
+        description="SkillPilot-AI enterprise learning knowledge base (extractive retrieval).",
         knowledge_sources=[KnowledgeSourceReference(name=KS_NAME)],
         retrieval_reasoning_effort=KnowledgeRetrievalMinimalReasoningEffort(),
         output_mode=KnowledgeRetrievalOutputMode.EXTRACTIVE_DATA,

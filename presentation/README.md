@@ -1,4 +1,6 @@
-# CertPilot — Cinematic Presentation
+# SkillPilot-AI — Cinematic Presentation
+
+*Reasoning Agents for Enterprise Certification*
 
 Standalone pitch presentation pages for the Microsoft Foundry hackathon. Two fullscreen animated sequences with **manual scene advance** (keyboard or click).
 
@@ -7,7 +9,7 @@ Standalone pitch presentation pages for the Microsoft Foundry hackathon. Two ful
 | Page | URL (dev) | Scenes | Purpose |
 |------|-----------|--------|---------|
 | **Opening** | http://localhost:5173/opening.html | 12 | Problem setup — $2M spend, 23% completion, three failures |
-| **Closing** | http://localhost:5173/closing.html | 18 | Solution & vision — CertPilot, agents, tagline, thank you |
+| **Closing** | http://localhost:5173/closing.html | 18 | Solution & vision — SkillPilot-AI, agents, tagline, thank you |
 
 ## Quick start
 

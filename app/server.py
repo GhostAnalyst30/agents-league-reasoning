@@ -1,6 +1,6 @@
-"""CertPilot web application backend.
+"""SkillPilot-AI web application backend.
 
-FastAPI server that wraps the CertPilot multi-agent system:
+FastAPI server that wraps the SkillPilot-AI multi-agent system:
 
 - GET  /api/learners                 learner roster joined with work signals
 - GET  /api/teams                    team-level aggregates (BR-005 compliant)
@@ -27,9 +27,10 @@ from fastapi.responses import FileResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-from certpilot import context, semantic
-from certpilot.agents import build_agents, make_kb_tool, run_resilient
-from certpilot.main import parse_verdict
+from skillpilot_ai import context, semantic
+from skillpilot_ai.branding import PITCH_TAGLINE, PRODUCT_NAME, TAGLINE
+from skillpilot_ai.agents import build_agents, make_kb_tool, run_resilient
+from skillpilot_ai.main import parse_verdict
 
 AGENT_META = {
     "curator": {"name": "LearningPathCurator", "label": "Learning Path Curator"},
@@ -55,7 +56,11 @@ async def lifespan(app: FastAPI):
         await kb_tool.__aexit__(None, None, None)
 
 
-app = FastAPI(title="CertPilot", lifespan=lifespan)
+app = FastAPI(
+    title=PRODUCT_NAME,
+    description=f"{TAGLINE}. {PITCH_TAGLINE}",
+    lifespan=lifespan,
+)
 
 
 @app.get("/api/learners")

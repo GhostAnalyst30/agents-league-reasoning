@@ -1,8 +1,10 @@
-"""Launch CertPilot web app in one command.
+"""Launch SkillPilot-AI web app in one command.
+
+SkillPilot-AI — Reasoning Agents for Enterprise Certification.
+Your skills pilot — grounded, validated, approved.
 
 Usage:
     python run.py
-
 Installs Python/npm dependencies when needed, builds the frontend if missing,
 starts the FastAPI server, and opens the browser.
 """
@@ -45,7 +47,7 @@ PYTHON_PACKAGES = [
 
 
 def log(msg: str) -> None:
-    print(f"[certpilot] {msg}", flush=True)
+    print(f"[skillpilot-ai] {msg}", flush=True)
 
 
 def venv_python() -> Path:
@@ -95,13 +97,29 @@ def ensure_node_tool(name: str) -> str:
     return path
 
 
+def needs_frontend_build() -> bool:
+    index = DIST_DIR / "index.html"
+    if not index.exists():
+        return True
+    dist_mtime = index.stat().st_mtime
+    src_index = WEB_DIR / "index.html"
+    if src_index.exists() and src_index.stat().st_mtime > dist_mtime:
+        return True
+    src_dir = WEB_DIR / "src"
+    if src_dir.exists():
+        for path in src_dir.rglob("*"):
+            if path.is_file() and path.stat().st_mtime > dist_mtime:
+                return True
+    return False
+
+
 def ensure_frontend() -> None:
     npm = ensure_node_tool("npm")
     node_modules = WEB_DIR / "node_modules"
     if not node_modules.exists():
         log("Installing frontend dependencies (npm install)...")
         run([npm, "install"], cwd=WEB_DIR)
-    if not (DIST_DIR / "index.html").exists():
+    if needs_frontend_build():
         log("Building frontend (npm run build)...")
         run([npm, "run", "build"], cwd=WEB_DIR)
 
@@ -124,7 +142,7 @@ def main() -> int:
 
     ensure_env_file()
     py = ensure_venv()
-    ensure_python_deps(py)
+    # ensure_python_deps(py)
     ensure_frontend()
 
     log(f"Starting server at {URL}")

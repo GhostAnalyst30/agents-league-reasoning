@@ -1,6 +1,7 @@
 import PitchShell from '../shared/layout/PitchShell'
 import SceneOrchestrator from '../shared/layout/SceneOrchestrator'
 import { useSceneNav } from '../shared/hooks/useSceneNav'
+import { PRODUCT_NAME } from '../shared/branding'
 import {
   BudgetCounter,
   CompletionGauge,
@@ -42,7 +43,7 @@ export default function OpeningPitch() {
       interacted={interacted}
       onNext={next}
       onPrev={prev}
-      title="CertPilot · Opening"
+      title={`${PRODUCT_NAME} · Opening`}
       burst={false}
     >
       <SceneOrchestrator sceneKey={SCENES[index].id}>

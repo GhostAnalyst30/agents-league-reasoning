@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { PRODUCT_NAME } from '../../shared/branding'
 import { AlertTriangle, EyeOff, HelpCircle, Users, Wallet, XCircle } from 'lucide-react'
 import CalendarOverload from '../../shared/components/CalendarOverload'
 import CinematicText from '../../shared/components/CinematicText'
@@ -206,7 +207,7 @@ export function OpeningClose() {
         transition={{ delay: 1 }}
         className="mt-10 inline-block text-sm text-slate-500 underline-offset-4 hover:text-azure-400 hover:underline"
       >
-        Continue to CertPilot. →
+        Continue to {PRODUCT_NAME}. →
       </motion.a>
     </div>
   )

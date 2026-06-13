@@ -8,6 +8,7 @@ import {
   Users,
   Workflow,
 } from 'lucide-react'
+import { PRODUCT_NAME, TAGLINE_SHORT } from './branding'
 import Pipeline from './pages/Pipeline'
 import AgentsChat from './pages/AgentsChat'
 import Teams from './pages/Teams'
@@ -33,8 +34,8 @@ export default function App() {
             <GraduationCap size={22} className="text-white" strokeWidth={2.2} />
           </div>
           <div>
-            <div className="text-[15px] font-bold tracking-tight text-white">CertPilot</div>
-            <div className="text-[11px] font-medium text-slate-500">Reasoning Agents</div>
+            <div className="text-[15px] font-bold tracking-tight text-white">{PRODUCT_NAME}</div>
+            <div className="text-[11px] font-medium text-slate-500">{TAGLINE_SHORT}</div>
           </div>
         </div>
 

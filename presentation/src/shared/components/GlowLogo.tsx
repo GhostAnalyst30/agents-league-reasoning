@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { GraduationCap } from 'lucide-react'
+import { TAGLINE } from '../branding'
 import { scaleIn } from '../motion/presets'
 
 interface GlowLogoProps {
@@ -19,7 +20,7 @@ export default function GlowLogo({
   size = 'lg',
   showIcon = true,
   showSub = false,
-  subtext = 'Reasoning Agents',
+  subtext = TAGLINE,
 }: GlowLogoProps) {
   const s = sizes[size]
   return (
@@ -49,7 +50,7 @@ export default function GlowLogo({
         transition={{ duration: 2.5, repeat: Infinity }}
         className={`${s.text} font-black tracking-tighter text-white`}
       >
-        CERT<span className="text-gradient">PILOT</span>
+        SKILL<span className="text-gradient">PILOT-AI</span>
       </motion.h1>
       {showSub && (
         <motion.p

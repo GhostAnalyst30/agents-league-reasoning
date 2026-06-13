@@ -1,18 +1,20 @@
-# CertPilot — Reasoning Agents for Enterprise Certification Enablement
+# SkillPilot-AI — Reasoning Agents for Enterprise Certification
 
 > Microsoft Agents League · Battle #2: Reasoning Agents with Microsoft Foundry
 
-CertPilot is a multi-agent system that takes an employee from *"I want to get certified"*
+*Your skills pilot — grounded, validated, approved.*
+
+SkillPilot-AI is a multi-agent system that takes an employee from *"I want to get certified"*
 to *exam-ready* — with every recommendation grounded in approved knowledge, every plan
 validated against business rules, and every answer gated by a critic before it ships.
 
-![CertPilot pipeline — learner selection and the six-agent stage tracker](img/image1.png)
+![SkillPilot-AI pipeline — learner selection and the six-agent stage tracker](img/image1.png)
 
 ## Why this matters
 
 Enterprises spend millions on certification programs with low completion rates. The
 failure mode is always the same: generic study plans that ignore real workload, no
-feedback loop after practice exams, and managers with zero visibility. CertPilot fixes
+feedback loop after practice exams, and managers with zero visibility. SkillPilot-AI fixes
 the three at once with specialized reasoning agents that share one grounded brain.
 
 ## Architecture
@@ -98,7 +100,7 @@ uncited grounded claims is rejected by both the CriticAgent and the eval harness
 
 ### Self-evaluation loop
 
-`python -m certpilot.evals` runs four scenario cases through the live agents and scores
+`python -m skillpilot_ai.evals` runs four scenario cases through the live agents and scores
 each answer on the Foundry evaluator taxonomy:
 
 - **groundedness** (LLM judge vs. the approved documents + live tool data)
@@ -127,7 +129,7 @@ data/
   knowledge/        4 synthetic enterprise docs → Foundry IQ knowledge source
   ontology/         semantic model: certifications, roles, skills, business rules
   synthetic/        learner profiles + simulated Work IQ signals
-src/certpilot/
+src/skillpilot_ai/
   agents.py         the six agents + Foundry IQ MCP tool factory
   tools.py          function tools (readiness rules, capacity, team aggregates)
   semantic.py       rules engine over the ontology (Fabric IQ concept)
@@ -167,8 +169,8 @@ You need two Azure resources (both fit in free/student tiers):
 ### 1. Clone and install
 
 ```powershell
-git clone <your-fork-url> certpilot
-cd certpilot
+git clone <your-fork-url> skillpilot-ai
+cd skillpilot-ai
 
 # Python environment
 python -m venv .venv
@@ -228,14 +230,14 @@ python -m uvicorn app.server:app --port 8000
 
 ```powershell
 $env:PYTHONPATH='src'                # Linux/macOS: export PYTHONPATH=src
-python -m certpilot.main L-1001
+python -m skillpilot_ai.main L-1001
 ```
 
 **Self-evaluation loop**:
 
 ```powershell
 $env:PYTHONPATH='src'
-python -m certpilot.evals
+python -m skillpilot_ai.evals
 ```
 
 **Agent Framework DevUI** (developer tooling view):
@@ -250,7 +252,7 @@ python scripts\devui.py
 Requires `azd` and a Foundry project in a [region that supports hosted agents](https://learn.microsoft.com/azure/ai-foundry/agents/concepts/hosted-agents):
 
 ```powershell
-cd hosted-agent\certpilot-sample-agent
+cd hosted-agent\skillpilot-ai-sample-agent
 azd auth login
 azd env set AZURE_OPENAI_BASE_URL "https://<resource>.openai.azure.com/openai/v1"
 azd env set AZURE_AI_API_KEY "<key>"
@@ -258,7 +260,7 @@ azd env set AZURE_SEARCH_ENDPOINT "https://<search>.search.windows.net"
 azd env set AZURE_SEARCH_API_KEY "<key>"
 azd up
 
-azd ai agent invoke certpilot-sample-agent '{\"input\": \"Is learner L-1001 ready to book the AZ-204 exam? Check the readiness rules and cite the policy.\"}'
+azd ai agent invoke skillpilot-ai-sample-agent '{\"input\": \"Is learner L-1001 ready to book the AZ-204 exam? Check the readiness rules and cite the policy.\"}'
 ```
 
 ### Troubleshooting

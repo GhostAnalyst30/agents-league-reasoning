@@ -1,4 +1,4 @@
-"""Self-evaluation harness for CertPilot.
+"""Self-evaluation harness for SkillPilot-AI.
 
 Runs a battery of scenario cases through the live agents and scores every
 answer on four metrics, mirroring the Foundry Agent evaluator taxonomy:
@@ -12,7 +12,7 @@ Results are printed as a table and written to evals/results.json so runs can
 be compared over time (the auto-evaluation loop).
 
 Usage:
-    python -m certpilot.evals
+    python -m skillpilot_ai.evals
 """
 
 import asyncio
@@ -241,7 +241,7 @@ async def run_evals() -> None:
     history.append(payload)
     history_file.write_text(json.dumps(history, indent=2), encoding="utf-8")
 
-    table = Table(title="CertPilot self-evaluation")
+    table = Table(title="SkillPilot-AI self-evaluation")
     for col in ("case", "ground.", "task adh.", "rule comp.", "citations", "deterministic"):
         table.add_column(col)
     for r in results:

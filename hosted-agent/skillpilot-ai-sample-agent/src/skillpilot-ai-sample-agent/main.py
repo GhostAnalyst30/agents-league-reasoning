@@ -1,6 +1,6 @@
-"""CertPilot Advisor - hosted agent for the Foundry Agent Service.
+"""SkillPilot-AI Advisor - hosted agent for the Foundry Agent Service.
 
-A single grounded advisor that fronts the CertPilot system: it answers
+A single grounded advisor that fronts the SkillPilot-AI system: it answers
 certification questions grounded in the Foundry IQ knowledge base (with
 [ref_id:N] citations) and applies the organization's readiness business
 rules through local tools over the synthetic dataset.
@@ -128,9 +128,9 @@ def main():
 
     agent = Agent(
         client=client,
-        name="CertPilotAdvisor",
+        name="SkillPilotAIAdvisor",
         instructions=(
-            "You are CertPilot Advisor, an enterprise certification enablement assistant. "
+            "You are SkillPilot-AI Advisor, an enterprise certification enablement assistant. "
             "For any question about certifications, study guidance, policies or readiness, "
             "you MUST first call retrieve_knowledge to ground your answer in the approved "
             "knowledge base, and preserve the [ref_id:N] citations next to every grounded "

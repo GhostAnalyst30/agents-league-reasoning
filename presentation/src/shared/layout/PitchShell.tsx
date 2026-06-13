@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { PRODUCT_NAME } from '../branding'
 import ParticleField from '../components/ParticleField'
 
 interface PitchShellProps {
@@ -22,7 +23,7 @@ export default function PitchShell({
   onPrev,
   particles = true,
   burst = false,
-  title = 'CertPilot',
+  title = PRODUCT_NAME,
 }: PitchShellProps) {
   const progress = ((index + 1) / total) * 100
 

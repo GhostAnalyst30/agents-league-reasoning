@@ -210,7 +210,7 @@ export default function Evals() {
       {runs.length === 0 && (
         <div className="glass flex flex-col items-center gap-2 p-12 text-slate-500">
           <FlaskConical size={28} strokeWidth={1.5} />
-          <div className="text-sm">No evaluation runs yet — run `python -m certpilot.evals` first.</div>
+          <div className="text-sm">No evaluation runs yet — run `python -m skillpilot_ai.evals` first.</div>
         </div>
       )}
     </div>

@@ -1,4 +1,4 @@
-"""CertPilot demo entry point.
+"""SkillPilot-AI demo entry point.
 
 Runs the full end-to-end flow for one learner, grounded in the Foundry IQ
 knowledge base over MCP:
@@ -7,7 +7,7 @@ knowledge base over MCP:
     -> critic gate (approve / revise loop)
 
 Usage:
-    python -m certpilot.main [learner_id]
+    python -m skillpilot_ai.main [learner_id]
 """
 
 import asyncio
@@ -57,7 +57,7 @@ async def run_flow(learner_id: str) -> None:
 async def _run_flow_inner(learner_id: str, kb_tool) -> None:
     agents = build_agents(kb_tool=kb_tool)
     grounded = "grounded in Foundry IQ" if kb_tool else "ungrounded"
-    console.rule(f"[bold cyan]CertPilot - end-to-end flow for {learner_id} ({grounded})")
+    console.rule(f"[bold cyan]SkillPilot-AI - end-to-end flow for {learner_id} ({grounded})")
 
     steps = [
         (
